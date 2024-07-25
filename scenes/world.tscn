@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj8hhckb25efi"]
+
+[ext_resource type="Texture2D" uid="uid://bcwtaceba0t8s" path="res://assets/telescopes/Subtract.png" id="1_1iswy"]
+[ext_resource type="Texture2D" uid="uid://d34l8ej08hh2r" path="res://assets/background.jpg" id="2_rj8el"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="3_s01xt"]
+
+[node name="World" type="Node2D"]
+
+[node name="TelecospeLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="TelecospeLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TelescopeMask" type="TextureRect" parent="TelecospeLayer/HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1iswy")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -344.0
+offset_top = -334.0
+offset_right = 1518.0
+offset_bottom = 882.0
+texture = ExtResource("2_rj8el")
+script = ExtResource("3_s01xt")
