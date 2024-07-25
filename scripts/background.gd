@@ -13,7 +13,6 @@ func move():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	var new_pos : Vector2 = position - input_direction.normalized() * speed
 	position = clamp_pos(new_pos)
-	print(position)
 
 func clamp_pos(pos):
 	var new_pos : Vector2
