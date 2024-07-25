@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=3 format=3 uid="uid://d17k5sdvbjg8c"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_k7jou"]
+[ext_resource type="Texture2D" uid="uid://f2w8goo5xqwu" path="res://assets/icon.svg" id="2_51web"]
+
+[resource]
+script = ExtResource("1_k7jou")
+name = "Test"
+sprite_full = ExtResource("2_51web")
+sprite_dots = ExtResource("2_51web")
