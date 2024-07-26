@@ -1,6 +1,7 @@
 extends Node
 
-var puzzles_status = {
+@onready var completed_count = 0
+@onready var puzzles_status = {
 	1: false,
 	2: false,
 	3: false,
@@ -23,12 +24,10 @@ func _ready():
 	GameStatus.puzzle_completed.connect(_on_game_status_puzzle_completed)
 
 func _on_game_status_puzzle_completed(id : int):
-	puzzles_status[id] = true
-	print(get_completed_count())
-
-func get_completed_count() -> int:
-	var count = 0
-	for val in puzzles_status.values():
-		if val == true: count += 1
+	if puzzles_status[id]: return # Puzzle already completed
 	
-	return count
+	puzzles_status[id] = true
+	update_completed_count()
+
+func update_completed_count():
+	completed_count += 1
