@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://brtbmsyoncvun"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_vi263"]
+[ext_resource type="Resource" uid="uid://dp2dgwgtd7vdk" path="res://scripts/resources/constellations/egg.tres" id="2_1pe8m"]
+[ext_resource type="Resource" uid="uid://cfiqiruc7qq72" path="res://scripts/resources/constellations/feather.tres" id="3_2w0vl"]
+
+[resource]
+script = ExtResource("1_vi263")
+id = 7
+hint_text = "Quem veio primeiro?"
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_1pe8m"), ExtResource("3_2w0vl")])

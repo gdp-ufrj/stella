@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://6dh2ocjduhlv"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_60u42"]
+[ext_resource type="Resource" uid="uid://bmew3vbdu83b8" path="res://scripts/resources/constellations/water_jug.tres" id="2_rvbmf"]
+[ext_resource type="Resource" uid="uid://5bwba1lirjtf" path="res://scripts/resources/constellations/inkwell.tres" id="3_ask4n"]
+
+[resource]
+script = ExtResource("1_60u42")
+id = 11
+hint_text = "Um terrível monstro marinho."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_rvbmf"), ExtResource("3_ask4n")])

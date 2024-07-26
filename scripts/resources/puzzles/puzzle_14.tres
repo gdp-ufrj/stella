@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://vjdttyfo72kx"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_5c6fo"]
+[ext_resource type="Resource" uid="uid://do4oxq6k5rods" path="res://scripts/resources/constellations/fox.tres" id="2_r5tl5"]
+[ext_resource type="Resource" uid="uid://c66iwtf4q3n7x" path="res://scripts/resources/constellations/guitar.tres" id="3_ugy5y"]
+
+[resource]
+script = ExtResource("1_5c6fo")
+id = 14
+hint_text = "O que a raposa diz?"
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_r5tl5"), ExtResource("3_ugy5y")])

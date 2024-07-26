@@ -1,6 +1,7 @@
 extends Resource
 class_name Puzzle
 
+@export var id : int
 @export_multiline var hint_text : String
 @export var solution_list : Array[Constellation]
 

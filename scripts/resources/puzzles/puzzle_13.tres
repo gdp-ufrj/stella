@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://btm36gul5lfm4"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_mk225"]
+[ext_resource type="Resource" uid="uid://bmcyeqwnyoh3p" path="res://scripts/resources/constellations/spider.tres" id="2_cvqa4"]
+[ext_resource type="Resource" uid="uid://cnrwarqg8doh1" path="res://scripts/resources/constellations/shoes.tres" id="3_7gj66"]
+
+[resource]
+script = ExtResource("1_mk225")
+id = 13
+hint_text = "Quatro pares de sapatos."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_cvqa4"), ExtResource("3_7gj66")])

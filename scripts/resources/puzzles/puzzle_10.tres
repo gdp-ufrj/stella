@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://b8qh01p0tvk42"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_6rd5i"]
+[ext_resource type="Resource" uid="uid://bmew3vbdu83b8" path="res://scripts/resources/constellations/water_jug.tres" id="2_ykvpq"]
+[ext_resource type="Resource" uid="uid://b6hqkrklao82o" path="res://scripts/resources/constellations/battery.tres" id="3_0mllo"]
+
+[resource]
+script = ExtResource("1_6rd5i")
+id = 10
+hint_text = "Uma bebida energética."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_ykvpq"), ExtResource("3_0mllo")])

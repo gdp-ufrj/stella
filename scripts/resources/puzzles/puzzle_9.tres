@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://bb6co32eaoxb4"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_gjh33"]
+[ext_resource type="Resource" uid="uid://do4oxq6k5rods" path="res://scripts/resources/constellations/fox.tres" id="2_x0ce1"]
+[ext_resource type="Resource" uid="uid://bsv26uk2p0pjr" path="res://scripts/resources/constellations/microphone.tres" id="3_xpves"]
+
+[resource]
+script = ExtResource("1_gjh33")
+id = 9
+hint_text = "Clube de comédia do Raposo."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_x0ce1"), ExtResource("3_xpves")])
