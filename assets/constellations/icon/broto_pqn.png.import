@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do70y3dakxb26"
-path="res://.godot/imported/telescopio.png-ddc045b673efe193bcc206842b148b35.ctex"
+uid="uid://233ykf5mofeg"
+path="res://.godot/imported/broto_pqn.png-392bf80e0043d4aa8591f4690820b036.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/telescopes/telescopio.png"
-dest_files=["res://.godot/imported/telescopio.png-ddc045b673efe193bcc206842b148b35.ctex"]
+source_file="res://assets/constellations/icon/broto_pqn.png"
+dest_files=["res://.godot/imported/broto_pqn.png-392bf80e0043d4aa8591f4690820b036.ctex"]
 
 [params]
 

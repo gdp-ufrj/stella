@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://d3q0v46w5tf82"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_pce3e"]
+[ext_resource type="Texture2D" uid="uid://b7bkf1rqy6u1p" path="res://assets/constellations/normal/abobora.png" id="2_ipjak"]
+[ext_resource type="Texture2D" uid="uid://dtyiwv472nexq" path="res://assets/constellations/icon/abobora_pqn.png" id="3_3d80q"]
+[ext_resource type="Texture2D" uid="uid://dqwh5a80y3x8" path="res://assets/constellations/no_lines/abobora_estrela.png" id="4_8yfxu"]
+
+[resource]
+script = ExtResource("1_pce3e")
+name = "Abóbora"
+sprite_full = ExtResource("2_ipjak")
+sprite_stars = ExtResource("4_8yfxu")
+sprite_mini = ExtResource("3_3d80q")

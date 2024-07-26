@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://bc2oojecgkh14"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_drw4f"]
+[ext_resource type="Texture2D" uid="uid://g867ctonldgq" path="res://assets/constellations/normal/balança.png" id="2_02ojw"]
+[ext_resource type="Texture2D" uid="uid://wws4gklvoycb" path="res://assets/constellations/icon/balança_pqn.png" id="3_0j2fb"]
+[ext_resource type="Texture2D" uid="uid://c18cnlyjlr4r2" path="res://assets/constellations/no_lines/balança_estrela.png" id="4_gkrbt"]
+
+[resource]
+script = ExtResource("1_drw4f")
+name = "Balança"
+sprite_full = ExtResource("2_02ojw")
+sprite_stars = ExtResource("4_gkrbt")
+sprite_mini = ExtResource("3_0j2fb")
