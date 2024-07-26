@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj8hhckb25efi"]
+[gd_scene load_steps=5 format=3 uid="uid://cj8hhckb25efi"]
 
-[ext_resource type="PackedScene" uid="uid://bdmaytxns1vqs" path="res://scenes/Telecospe.tscn" id="1_5pv46"]
+[ext_resource type="PackedScene" uid="uid://bdmaytxns1vqs" path="res://scenes/telecospe.tscn" id="1_5pv46"]
 [ext_resource type="Texture2D" uid="uid://d34l8ej08hh2r" path="res://assets/background.jpg" id="2_rj8el"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="3_s01xt"]
+[ext_resource type="PackedScene" uid="uid://dnuaxdnwile1u" path="res://scenes/star.tscn" id="4_aq1hn"]
 
 [node name="World" type="Node2D"]
 
 [node name="Telecospe" parent="." instance=ExtResource("1_5pv46")]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_left = -344.0
 offset_top = -334.0
 offset_right = 1518.0
 offset_bottom = 882.0
 texture = ExtResource("2_rj8el")
 script = ExtResource("3_s01xt")
+
+[node name="Star" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(834, 522)

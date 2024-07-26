@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdmaytxns1vqs"]
+
+[ext_resource type="Texture2D" uid="uid://bcwtaceba0t8s" path="res://assets/telescopes/Subtract.png" id="1_820vq"]
+[ext_resource type="Script" path="res://scripts/telescope.gd" id="2_jau6c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3b5au"]
+radius = 192.0
+
+[node name="TelecospeLayer" type="CanvasLayer"]
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TelescopeMask" type="TextureRect" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_820vq")
+expand_mode = 2
+script = ExtResource("2_jau6c")
+
+[node name="Area2D" type="Area2D" parent="HUD/TelescopeMask"]
+position = Vector2(320, 240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/TelescopeMask/Area2D"]
+shape = SubResource("CircleShape2D_3b5au")
+
+[connection signal="area_entered" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_exited"]
