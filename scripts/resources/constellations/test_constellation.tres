@@ -7,4 +7,5 @@
 script = ExtResource("1_k7jou")
 name = "Test"
 sprite_full = ExtResource("2_51web")
-sprite_dots = ExtResource("2_51web")
+sprite_stars = ExtResource("2_51web")
+sprite_mini = ExtResource("2_51web")
