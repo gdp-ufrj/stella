@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj8hhckb25efi"]
+[gd_scene load_steps=9 format=3 uid="uid://cj8hhckb25efi"]
 
 [ext_resource type="PackedScene" uid="uid://bdmaytxns1vqs" path="res://scenes/telescope.tscn" id="1_5pv46"]
 [ext_resource type="Texture2D" uid="uid://c7oxqaxvtob8v" path="res://assets/bg_image.png" id="2_48iha"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="3_s01xt"]
 [ext_resource type="PackedScene" uid="uid://dnuaxdnwile1u" path="res://scenes/star.tscn" id="4_aq1hn"]
+[ext_resource type="Resource" uid="uid://do4oxq6k5rods" path="res://scripts/resources/constellations/fox.tres" id="5_nnl8j"]
+[ext_resource type="Resource" uid="uid://d3q0v46w5tf82" path="res://scripts/resources/constellations/pumpkin.tres" id="6_7yja2"]
+[ext_resource type="Resource" uid="uid://cnrwarqg8doh1" path="res://scripts/resources/constellations/shoes.tres" id="7_8g724"]
+[ext_resource type="Resource" uid="uid://dl6bueiwcngih" path="res://scripts/resources/constellations/clock.tres" id="8_1qmx2"]
 
 [node name="World" type="Node2D"]
 
@@ -17,5 +21,18 @@ offset_bottom = 882.0
 texture = ExtResource("2_48iha")
 script = ExtResource("3_s01xt")
 
-[node name="Star" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(834, 522)
+[node name="Fox" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(599, 488)
+constellation = ExtResource("5_nnl8j")
+
+[node name="Pumpkin" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(390, 383)
+constellation = ExtResource("6_7yja2")
+
+[node name="Shoes" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(884, 385)
+constellation = ExtResource("7_8g724")
+
+[node name="Clock" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(887, 546)
+constellation = ExtResource("8_1qmx2")

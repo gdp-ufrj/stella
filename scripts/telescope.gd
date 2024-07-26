@@ -13,13 +13,15 @@ var current_lens = 0
 func _ready():
 	for ico in $"../PuzzlePanel/InventoryIcons".get_children():
 		icons.append(ico)
-	set_lens(0)
+	set_lens(-1)
 
 func _input(event):
 	if event.is_action_pressed("select"):
 		for star in contained_stars:
 			if not is_completely_inside(star): continue
 			star.select_star()
+	if event.is_action_pressed("combine"):
+		GameStatus.verify_solution()
 
 func _process(_delta):
 	set_icons()

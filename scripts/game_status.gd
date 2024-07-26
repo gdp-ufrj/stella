@@ -7,14 +7,16 @@ const IMAGE_LIMIT = 3
 
 signal puzzle_completed(id : int)
 
-func _input(event):
-	if event.is_action_pressed("combine"):
-		verify_solution()
+func _ready():
+	var p = load("res://scripts/resources/puzzles/puzzle_2.tres")
+	set_current_puzzle(p)
 
-func add_new_image(img : Constellation):
-	if len(inventory) >= IMAGE_LIMIT: return
-	if inventory.has(img): return
+func add_new_image(img : Constellation) -> bool:
+	if len(inventory) >= IMAGE_LIMIT: return false
+	if inventory.has(img): return false
+	
 	inventory.append(img)
+	return true
 
 func empty_inventory():
 	inventory.clear()
@@ -23,7 +25,10 @@ func set_current_puzzle(new_puzzle : Puzzle):
 	current_puzzle = new_puzzle
 
 func verify_solution():
-	if not current_puzzle: return
+	if not current_puzzle:
+		empty_inventory()
+		return
+
 	if current_puzzle.is_answer_correct(inventory):
 		puzzle_completed.emit(current_puzzle.id)
 		set_current_puzzle(null)
