@@ -19,7 +19,6 @@ func verify_solution():
 	if current_puzzle:
 		if current_puzzle.is_answer_correct(inventory):
 			# Puzzle correct logic
-			pass
 			set_current_puzzle(null)
 		else:
 			# Puzzle incorrect logic
