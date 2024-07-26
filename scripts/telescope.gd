@@ -1,8 +1,13 @@
 extends TextureRect
 
+@export var lens : Array[Texture]
+@export var lens_radius : Array[int]
 @onready var area_2d : = get_node("Area2D") as Area2D
 @onready var collision_shape_2d : = get_node("Area2D/CollisionShape2D") as CollisionShape2D
 var contained_stars : Array = []
+
+func _ready():
+	set_lens(0)
 
 func _process(delta):
 	if Input.is_action_just_pressed("select"):
@@ -35,3 +40,8 @@ func is_completely_inside(star: Area2D) -> bool:
 			return false
 
 	return true
+
+func set_lens(size : int):
+	if size >= len(lens) or size < 0: return
+	texture = lens[size]
+	collision_shape_2d.shape.radius = lens_radius[size]
