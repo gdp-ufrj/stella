@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://bdmaytxns1vqs"]
 
-[ext_resource type="Texture2D" uid="uid://b2332e4yt8w7b" path="res://assets/lens/lens_5.png" id="1_0qnf3"]
-[ext_resource type="Texture2D" uid="uid://dma8wfc53d807" path="res://assets/lens/lens_1.png" id="1_xvbn7"]
+[ext_resource type="Texture2D" uid="uid://ckc8xou7xgg0t" path="res://assets/lens/v2/lens_4.png" id="1_gbpfs"]
 [ext_resource type="Script" path="res://scripts/telescope.gd" id="2_jau6c"]
-[ext_resource type="Texture2D" uid="uid://bduics21c5o24" path="res://assets/lens/lens_2.png" id="3_rqg7y"]
-[ext_resource type="Texture2D" uid="uid://tudr628qn8ol" path="res://assets/lens/lens_3.png" id="4_ylhe4"]
-[ext_resource type="Texture2D" uid="uid://c4knk4u03moy3" path="res://assets/lens/lens_4.png" id="5_lpvf4"]
+[ext_resource type="Texture2D" uid="uid://c2veg3jb042aq" path="res://assets/lens/v2/lens_0.png" id="3_ym13v"]
+[ext_resource type="Texture2D" uid="uid://daj48qra3m2vu" path="res://assets/lens/v2/lens_1.png" id="4_uxe4m"]
+[ext_resource type="Texture2D" uid="uid://btbnujd6h67fo" path="res://assets/lens/v2/lens_2.png" id="5_232y5"]
+[ext_resource type="Texture2D" uid="uid://b2ynuwynb3um0" path="res://assets/lens/v2/lens_3.png" id="6_ugdpk"]
 [ext_resource type="Texture2D" uid="uid://bxqyemjfqoj3w" path="res://assets/hud/HUD.png" id="7_dooed"]
 [ext_resource type="FontFile" uid="uid://c4t2m7h42o653" path="res://assets/fonts/PixelDigivolve-mOm9.ttf" id="8_kreqs"]
 
@@ -29,10 +29,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0qnf3")
+texture = ExtResource("1_gbpfs")
 expand_mode = 2
 script = ExtResource("2_jau6c")
-lens = Array[Texture]([ExtResource("1_xvbn7"), ExtResource("3_rqg7y"), ExtResource("4_ylhe4"), ExtResource("5_lpvf4"), ExtResource("1_0qnf3")])
+lens = Array[Texture]([ExtResource("3_ym13v"), ExtResource("4_uxe4m"), ExtResource("5_232y5"), ExtResource("6_ugdpk"), ExtResource("1_gbpfs")])
 lens_radius = Array[int]([43, 56, 75, 98, 122])
 
 [node name="Area2D" type="Area2D" parent="HUD/TelescopeMask"]

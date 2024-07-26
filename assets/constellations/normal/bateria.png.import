@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bduics21c5o24"
-path="res://.godot/imported/lens_2.png-e429bd4ce62ece982a0c99519e02d5bc.ctex"
+uid="uid://do8sdqp03ufv4"
+path="res://.godot/imported/bateria.png-6c379d73b0f032d6679f664391c71489.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lens/lens_2.png"
-dest_files=["res://.godot/imported/lens_2.png-e429bd4ce62ece982a0c99519e02d5bc.ctex"]
+source_file="res://assets/constellations/normal/bateria.png"
+dest_files=["res://.godot/imported/bateria.png-6c379d73b0f032d6679f664391c71489.ctex"]
 
 [params]
 

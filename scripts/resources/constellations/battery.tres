@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://b6hqkrklao82o"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_jekea"]
+[ext_resource type="Texture2D" uid="uid://do8sdqp03ufv4" path="res://assets/constellations/normal/bateria.png" id="2_g4iqc"]
+[ext_resource type="Texture2D" uid="uid://c7lq1jxqmyngw" path="res://assets/constellations/icon/bateria_pqn.png" id="3_vcb6q"]
+[ext_resource type="Texture2D" uid="uid://dwlp0essnm2dx" path="res://assets/constellations/no_lines/bateria_estrela.png" id="4_cvtn0"]
+
+[resource]
+script = ExtResource("1_jekea")
+name = "Bateria"
+sprite_full = ExtResource("2_g4iqc")
+sprite_stars = ExtResource("4_cvtn0")
+sprite_mini = ExtResource("3_vcb6q")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://cnrwarqg8doh1"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_c5gvl"]
+[ext_resource type="Texture2D" uid="uid://cc4wrj2tsdxx4" path="res://assets/constellations/normal/sapatinho.png" id="2_ltrri"]
+[ext_resource type="Texture2D" uid="uid://hcrbegn6phly" path="res://assets/constellations/icon/sapatinho_pqn.png" id="3_qe8jm"]
+[ext_resource type="Texture2D" uid="uid://bifrnsu3gkd77" path="res://assets/constellations/no_lines/sapatinho_estrela.png" id="4_836jv"]
+
+[resource]
+script = ExtResource("1_c5gvl")
+name = "Sapatinho"
+sprite_full = ExtResource("2_ltrri")
+sprite_stars = ExtResource("4_836jv")
+sprite_mini = ExtResource("3_qe8jm")

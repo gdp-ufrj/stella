@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://do4oxq6k5rods"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_7bhl1"]
+[ext_resource type="Texture2D" uid="uid://cooblejk2j3rv" path="res://assets/constellations/normal/raposa.png" id="2_beue3"]
+[ext_resource type="Texture2D" uid="uid://dvc2o0pn8fdp4" path="res://assets/constellations/icon/raposa_pqn.png" id="3_fwtc2"]
+[ext_resource type="Texture2D" uid="uid://b82qml6wa808g" path="res://assets/constellations/no_lines/raposa_estrela.png" id="4_roxi3"]
+
+[resource]
+script = ExtResource("1_7bhl1")
+name = "Raposa"
+sprite_full = ExtResource("2_beue3")
+sprite_stars = ExtResource("4_roxi3")
+sprite_mini = ExtResource("3_fwtc2")

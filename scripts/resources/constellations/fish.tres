@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://b3l2qnrhvldht"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_kp3nr"]
+[ext_resource type="Texture2D" uid="uid://dppr0mn7i6o7d" path="res://assets/constellations/normal/peixe.png" id="2_76jht"]
+[ext_resource type="Texture2D" uid="uid://dvunh5gjolcpc" path="res://assets/constellations/icon/peixe_pqn.png" id="3_nskw3"]
+[ext_resource type="Texture2D" uid="uid://bfqel4884oyeo" path="res://assets/constellations/no_lines/peixe_estrela.png" id="4_lgqtw"]
+
+[resource]
+script = ExtResource("1_kp3nr")
+name = "Peixes"
+sprite_full = ExtResource("2_76jht")
+sprite_stars = ExtResource("4_lgqtw")
+sprite_mini = ExtResource("3_nskw3")

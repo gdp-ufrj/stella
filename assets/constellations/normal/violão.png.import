@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4knk4u03moy3"
-path="res://.godot/imported/lens_4.png-540fc1bdaf79012a0024a78f2ca0b8ad.ctex"
+uid="uid://dbb52euki4y54"
+path="res://.godot/imported/violão.png-c57e9b97f4d8a1fbbe5818130fa3385d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lens/lens_4.png"
-dest_files=["res://.godot/imported/lens_4.png-540fc1bdaf79012a0024a78f2ca0b8ad.ctex"]
+source_file="res://assets/constellations/normal/violão.png"
+dest_files=["res://.godot/imported/violão.png-c57e9b97f4d8a1fbbe5818130fa3385d.ctex"]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://dl6bueiwcngih"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_ocwn1"]
+[ext_resource type="Texture2D" uid="uid://chg4yu72om2u5" path="res://assets/constellations/normal/relogio.png" id="2_7h1w1"]
+[ext_resource type="Texture2D" uid="uid://dpt1a1sgqq4g8" path="res://assets/constellations/icon/relogio_pqn.png" id="3_ormk2"]
+[ext_resource type="Texture2D" uid="uid://bbyhgpxfhyghb" path="res://assets/constellations/no_lines/relogio_estrela.png" id="4_rgwmg"]
+
+[resource]
+script = ExtResource("1_ocwn1")
+name = "Relógio"
+sprite_full = ExtResource("2_7h1w1")
+sprite_stars = ExtResource("4_rgwmg")
+sprite_mini = ExtResource("3_ormk2")

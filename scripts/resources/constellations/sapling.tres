@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://bip7btlmn1par"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_f3rb8"]
+[ext_resource type="Texture2D" uid="uid://c3amumxygmy40" path="res://assets/constellations/normal/broto.png" id="2_7ye5u"]
+[ext_resource type="Texture2D" uid="uid://233ykf5mofeg" path="res://assets/constellations/icon/broto_pqn.png" id="3_glkfv"]
+[ext_resource type="Texture2D" uid="uid://b4owlp4o3b4hu" path="res://assets/constellations/no_lines/broto_estrela.png" id="4_c0pkn"]
+
+[resource]
+script = ExtResource("1_f3rb8")
+name = "Broto"
+sprite_full = ExtResource("2_7ye5u")
+sprite_stars = ExtResource("4_c0pkn")
+sprite_mini = ExtResource("3_glkfv")

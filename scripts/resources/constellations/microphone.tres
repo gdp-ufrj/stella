@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://bsv26uk2p0pjr"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_7tphe"]
+[ext_resource type="Texture2D" uid="uid://dyvwtbpr1myx3" path="res://assets/constellations/normal/microfone.png" id="2_dyrxp"]
+[ext_resource type="Texture2D" uid="uid://c3u2d5fpobfgt" path="res://assets/constellations/icon/microfone_pqn.png" id="3_wm11r"]
+[ext_resource type="Texture2D" uid="uid://i5ms73movol8" path="res://assets/constellations/no_lines/microfone_estrela.png" id="4_78mxf"]
+
+[resource]
+script = ExtResource("1_7tphe")
+name = "Microfone"
+sprite_full = ExtResource("2_dyrxp")
+sprite_stars = ExtResource("4_78mxf")
+sprite_mini = ExtResource("3_wm11r")

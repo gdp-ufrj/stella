@@ -8,6 +8,7 @@ extends TextureRect
 
 var contained_stars : Array = []
 var icons : Array[Sprite2D]
+var current_lens = 0
 
 func _ready():
 	for ico in $"../PuzzlePanel/InventoryIcons".get_children():

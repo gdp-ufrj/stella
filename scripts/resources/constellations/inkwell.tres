@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://5bwba1lirjtf"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_pybi6"]
+[ext_resource type="Texture2D" uid="uid://k1rxku7e16j2" path="res://assets/constellations/normal/tinteiro.png" id="2_g0m4b"]
+[ext_resource type="Texture2D" uid="uid://gu0get51axtt" path="res://assets/constellations/icon/tinteiro_pqn.png" id="3_nrwf3"]
+[ext_resource type="Texture2D" uid="uid://crdhb265t75my" path="res://assets/constellations/no_lines/tinteiro_estrela.png" id="4_h4kwi"]
+
+[resource]
+script = ExtResource("1_pybi6")
+name = "Tinteiro"
+sprite_full = ExtResource("2_g0m4b")
+sprite_stars = ExtResource("4_h4kwi")
+sprite_mini = ExtResource("3_nrwf3")

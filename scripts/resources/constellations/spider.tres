@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://bmcyeqwnyoh3p"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_q2vrl"]
+[ext_resource type="Texture2D" uid="uid://c62gtktv43yb1" path="res://assets/constellations/normal/aranha.png" id="2_csfnv"]
+[ext_resource type="Texture2D" uid="uid://cw6qcv1atkuya" path="res://assets/constellations/icon/aranha_pqn.png" id="3_xnw2f"]
+[ext_resource type="Texture2D" uid="uid://bmkdy23dtt348" path="res://assets/constellations/no_lines/aranha_estrela.png" id="4_afe57"]
+
+[resource]
+script = ExtResource("1_q2vrl")
+name = "Aranha"
+sprite_full = ExtResource("2_csfnv")
+sprite_stars = ExtResource("4_afe57")
+sprite_mini = ExtResource("3_xnw2f")

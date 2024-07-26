@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dma8wfc53d807"
-path="res://.godot/imported/lens_1.png-02b596d51f20b2e50ac84d2e3cc99137.ctex"
+uid="uid://capumdmncwrej"
+path="res://.godot/imported/pena.png-ce6b1d0e2c9e666fd2ddc50ed8f5a7d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lens/lens_1.png"
-dest_files=["res://.godot/imported/lens_1.png-02b596d51f20b2e50ac84d2e3cc99137.ctex"]
+source_file="res://assets/constellations/normal/pena.png"
+dest_files=["res://.godot/imported/pena.png-ce6b1d0e2c9e666fd2ddc50ed8f5a7d2.ctex"]
 
 [params]
 

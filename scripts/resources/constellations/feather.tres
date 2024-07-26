@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://cfiqiruc7qq72"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_yo46h"]
+[ext_resource type="Texture2D" uid="uid://capumdmncwrej" path="res://assets/constellations/normal/pena.png" id="2_mrm7a"]
+[ext_resource type="Texture2D" uid="uid://cgerjo7wrow5c" path="res://assets/constellations/icon/pena_pqn.png" id="3_08vj5"]
+[ext_resource type="Texture2D" uid="uid://d0fy88jd4kwbv" path="res://assets/constellations/no_lines/pena_estrela.png" id="4_a2w5f"]
+
+[resource]
+script = ExtResource("1_yo46h")
+name = "Pena"
+sprite_full = ExtResource("2_mrm7a")
+sprite_stars = ExtResource("4_a2w5f")
+sprite_mini = ExtResource("3_08vj5")

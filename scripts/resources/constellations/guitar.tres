@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://c66iwtf4q3n7x"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_0n32b"]
+[ext_resource type="Texture2D" uid="uid://dbb52euki4y54" path="res://assets/constellations/normal/violão.png" id="2_va4b5"]
+[ext_resource type="Texture2D" uid="uid://btpqnegnxnlyf" path="res://assets/constellations/icon/violão_pqn.png" id="3_y0gd6"]
+[ext_resource type="Texture2D" uid="uid://d057tvr85jmqg" path="res://assets/constellations/no_lines/violão_estrela.png" id="4_udtjv"]
+
+[resource]
+script = ExtResource("1_0n32b")
+name = "Violão"
+sprite_full = ExtResource("2_va4b5")
+sprite_stars = ExtResource("4_udtjv")
+sprite_mini = ExtResource("3_y0gd6")
