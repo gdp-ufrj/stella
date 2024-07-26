@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://0i5tm7q2ajri"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_fiux3"]
+[ext_resource type="Resource" uid="uid://b3l2qnrhvldht" path="res://scripts/resources/constellations/fish.tres" id="2_etg3c"]
+[ext_resource type="Resource" uid="uid://bc2oojecgkh14" path="res://scripts/resources/constellations/scales.tres" id="3_tsmsw"]
+[ext_resource type="Resource" uid="uid://bmew3vbdu83b8" path="res://scripts/resources/constellations/water_jug.tres" id="4_xdg02"]
+
+[resource]
+script = ExtResource("1_fiux3")
+id = 15
+hint_text = "Membros do zodíaco."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_etg3c"), ExtResource("3_tsmsw"), ExtResource("4_xdg02")])

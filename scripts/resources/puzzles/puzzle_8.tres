@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://b4ysa5v7lqnon"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_v50u6"]
+[ext_resource type="Resource" uid="uid://bsv26uk2p0pjr" path="res://scripts/resources/constellations/microphone.tres" id="2_tj5co"]
+[ext_resource type="Resource" uid="uid://c66iwtf4q3n7x" path="res://scripts/resources/constellations/guitar.tres" id="3_l0x65"]
+
+[resource]
+script = ExtResource("1_v50u6")
+id = 8
+hint_text = "O show é todo seu."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_tj5co"), ExtResource("3_l0x65")])

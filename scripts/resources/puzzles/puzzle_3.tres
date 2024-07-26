@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://bnqp2k0c5i1ny"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_tfix3"]
+[ext_resource type="Resource" uid="uid://bip7btlmn1par" path="res://scripts/resources/constellations/sapling.tres" id="2_x82g5"]
+[ext_resource type="Resource" uid="uid://dp2dgwgtd7vdk" path="res://scripts/resources/constellations/egg.tres" id="3_i0rqy"]
+
+[resource]
+script = ExtResource("1_tfix3")
+id = 3
+hint_text = "O começo de uma nova vida."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_x82g5"), ExtResource("3_i0rqy")])

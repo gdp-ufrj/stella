@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://bnkvjiwsdv2pn"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_0o8su"]
+[ext_resource type="Resource" uid="uid://cfiqiruc7qq72" path="res://scripts/resources/constellations/feather.tres" id="2_bb5wm"]
+[ext_resource type="Resource" uid="uid://5bwba1lirjtf" path="res://scripts/resources/constellations/inkwell.tres" id="3_hsm6x"]
+
+[resource]
+script = ExtResource("1_0o8su")
+id = 1
+hint_text = "O necessário para escrever uma carta."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_bb5wm"), ExtResource("3_hsm6x")])

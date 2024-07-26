@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://bd7b1xq3ja4xn"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_mhb2y"]
+[ext_resource type="Resource" uid="uid://bmcyeqwnyoh3p" path="res://scripts/resources/constellations/spider.tres" id="2_ca8wh"]
+[ext_resource type="Resource" uid="uid://bmew3vbdu83b8" path="res://scripts/resources/constellations/water_jug.tres" id="3_wfc0b"]
+
+[resource]
+script = ExtResource("1_mhb2y")
+id = 12
+hint_text = "Aranha arranha a jarra."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_ca8wh"), ExtResource("3_wfc0b")])
