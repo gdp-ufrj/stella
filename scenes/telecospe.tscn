@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdmaytxns1vqs"]
+[gd_scene load_steps=10 format=3 uid="uid://bdmaytxns1vqs"]
 
 [ext_resource type="Texture2D" uid="uid://b2332e4yt8w7b" path="res://assets/lens/lens_5.png" id="1_0qnf3"]
 [ext_resource type="Texture2D" uid="uid://dma8wfc53d807" path="res://assets/lens/lens_1.png" id="1_xvbn7"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bduics21c5o24" path="res://assets/lens/lens_2.png" id="3_rqg7y"]
 [ext_resource type="Texture2D" uid="uid://tudr628qn8ol" path="res://assets/lens/lens_3.png" id="4_ylhe4"]
 [ext_resource type="Texture2D" uid="uid://c4knk4u03moy3" path="res://assets/lens/lens_4.png" id="5_lpvf4"]
+[ext_resource type="Texture2D" uid="uid://bxqyemjfqoj3w" path="res://assets/hud/HUD.png" id="7_dooed"]
+[ext_resource type="FontFile" uid="uid://c4t2m7h42o653" path="res://assets/fonts/PixelDigivolve-mOm9.ttf" id="8_kreqs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3b5au"]
 radius = 122.0
@@ -27,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xvbn7")
+texture = ExtResource("1_0qnf3")
 expand_mode = 2
 script = ExtResource("2_jau6c")
 lens = Array[Texture]([ExtResource("1_xvbn7"), ExtResource("3_rqg7y"), ExtResource("4_ylhe4"), ExtResource("5_lpvf4"), ExtResource("1_0qnf3")])
@@ -38,6 +40,40 @@ position = Vector2(240, 135)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/TelescopeMask/Area2D"]
 shape = SubResource("CircleShape2D_3b5au")
+
+[node name="PuzzlePanel" type="TextureRect" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_dooed")
+
+[node name="HintText" type="Label" parent="HUD/PuzzlePanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 127.0
+offset_bottom = 30.0
+theme_override_constants/line_spacing = -2
+theme_override_fonts/font = ExtResource("8_kreqs")
+theme_override_font_sizes/font_size = 10
+text = "O necessário para escrever uma carta"
+autowrap_mode = 2
+clip_text = true
+text_overrun_behavior = 4
+
+[node name="InventoryIcons" type="Node" parent="HUD/PuzzlePanel"]
+
+[node name="Item1" type="Sprite2D" parent="HUD/PuzzlePanel/InventoryIcons"]
+position = Vector2(20, 58)
+
+[node name="Item2" type="Sprite2D" parent="HUD/PuzzlePanel/InventoryIcons"]
+position = Vector2(60, 58)
+
+[node name="Item3" type="Sprite2D" parent="HUD/PuzzlePanel/InventoryIcons"]
+position = Vector2(100, 58)
 
 [connection signal="area_entered" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_exited"]
