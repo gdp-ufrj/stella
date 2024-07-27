@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://drs5025ebtgk8"]
+
+[ext_resource type="Script" path="res://scripts/notebook_option.gd" id="1_j628e"]
+[ext_resource type="FontFile" uid="uid://71j4oljo4i6m" path="res://assets/fonts/Pixeled.ttf" id="2_44h5q"]
+[ext_resource type="Texture2D" uid="uid://csl7lli6w1wtt" path="res://assets/hud/box.png" id="2_nm1uw"]
+
+[node name="NotebookOption" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 25.0
+grow_horizontal = 2
+script = ExtResource("1_j628e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("2_nm1uw")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0.0352941, 0.141176, 1)
+theme_override_fonts/font = ExtResource("2_44h5q")
+theme_override_font_sizes/font_size = 5
+text = "11."
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

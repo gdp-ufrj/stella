@@ -1,11 +1,16 @@
 extends Node
 
-@onready var inventory : Array[Constellation] = []
-
-var current_puzzle : Puzzle
-const IMAGE_LIMIT = 3
-
 signal puzzle_completed(id : int)
+
+const IMAGE_LIMIT = 3
+enum GAME_STATE {
+	EXPLORATION,
+	NOTEBOOK,
+}
+
+@onready var inventory : Array[Constellation] = []
+var current_puzzle : Puzzle
+var current_state : GAME_STATE = GAME_STATE.EXPLORATION
 
 func add_new_image(img : Constellation) -> bool:
 	if len(inventory) >= IMAGE_LIMIT: return false
@@ -30,3 +35,6 @@ func verify_solution():
 		set_current_puzzle(null)
 		
 	empty_inventory()
+
+func change_state(new_state : GAME_STATE):
+	current_state = new_state

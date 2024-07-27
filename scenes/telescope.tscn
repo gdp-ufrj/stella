@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdmaytxns1vqs"]
+[gd_scene load_steps=35 format=3 uid="uid://bdmaytxns1vqs"]
 
 [ext_resource type="Texture2D" uid="uid://b8a6kvusqpelu" path="res://assets/lens/v3/lens_4.png" id="1_2p3w2"]
 [ext_resource type="Script" path="res://scripts/telescope.gd" id="2_jau6c"]
@@ -9,10 +9,119 @@
 [ext_resource type="Texture2D" uid="uid://brtud6bb558dg" path="res://assets/hud/HUD_v2.png" id="7_nmidp"]
 [ext_resource type="FontFile" uid="uid://71j4oljo4i6m" path="res://assets/fonts/Pixeled.ttf" id="8_lvsta"]
 [ext_resource type="Texture2D" uid="uid://wqetntdq63yo" path="res://assets/hud/book_default.png" id="9_0rd6g"]
+[ext_resource type="Script" path="res://scripts/notebook.gd" id="9_uyyer"]
 [ext_resource type="Texture2D" uid="uid://llbkemprqkx6" path="res://assets/hud/book_hover.png" id="10_7tuov"]
+[ext_resource type="Texture2D" uid="uid://dp1rbki6iokm2" path="res://assets/hud/open_notebook.png" id="11_qn6rk"]
+[ext_resource type="PackedScene" uid="uid://drs5025ebtgk8" path="res://scenes/notebook_option.tscn" id="13_awek3"]
+[ext_resource type="Resource" uid="uid://bnkvjiwsdv2pn" path="res://scripts/resources/puzzles/puzzle_1.tres" id="14_bluc0"]
+[ext_resource type="Resource" uid="uid://brtply2blonhd" path="res://scripts/resources/puzzles/puzzle_2.tres" id="14_sqvv8"]
+[ext_resource type="Resource" uid="uid://bnqp2k0c5i1ny" path="res://scripts/resources/puzzles/puzzle_3.tres" id="16_y2cnx"]
+[ext_resource type="Resource" uid="uid://d34y42pdt74tc" path="res://scripts/resources/puzzles/puzzle_4.tres" id="17_pdqs1"]
+[ext_resource type="Resource" uid="uid://dl7isrd4dgejs" path="res://scripts/resources/puzzles/puzzle_5.tres" id="18_kxacd"]
+[ext_resource type="Resource" uid="uid://vnn6xry8l44f" path="res://scripts/resources/puzzles/puzzle_6.tres" id="19_3bl8x"]
+[ext_resource type="Resource" uid="uid://brtbmsyoncvun" path="res://scripts/resources/puzzles/puzzle_7.tres" id="20_iisn2"]
+[ext_resource type="Resource" uid="uid://b4ysa5v7lqnon" path="res://scripts/resources/puzzles/puzzle_8.tres" id="21_v7vxu"]
+[ext_resource type="Resource" uid="uid://bb6co32eaoxb4" path="res://scripts/resources/puzzles/puzzle_9.tres" id="22_0stcj"]
+[ext_resource type="Resource" uid="uid://b8qh01p0tvk42" path="res://scripts/resources/puzzles/puzzle_10.tres" id="23_n0rkb"]
+[ext_resource type="Resource" uid="uid://6dh2ocjduhlv" path="res://scripts/resources/puzzles/puzzle_11.tres" id="24_2lrxh"]
+[ext_resource type="Resource" uid="uid://bd7b1xq3ja4xn" path="res://scripts/resources/puzzles/puzzle_12.tres" id="25_23t8m"]
+[ext_resource type="Resource" uid="uid://btm36gul5lfm4" path="res://scripts/resources/puzzles/puzzle_13.tres" id="26_25cdc"]
+[ext_resource type="Resource" uid="uid://vjdttyfo72kx" path="res://scripts/resources/puzzles/puzzle_14.tres" id="27_24sq4"]
+[ext_resource type="Resource" uid="uid://0i5tm7q2ajri" path="res://scripts/resources/puzzles/puzzle_15.tres" id="28_2ou8h"]
+[ext_resource type="Resource" uid="uid://dmul32x6gqi5s" path="res://scripts/resources/puzzles/puzzle_16.tres" id="29_3hbvn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3b5au"]
 radius = 122.0
+
+[sub_resource type="Animation" id="Animation_qmcg2"]
+resource_name = "open_notebook_menu"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotebookButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, 151), Vector2(5, 300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Notebook:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 270), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hdoou"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotebookButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 151)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Notebook:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 270)]
+}
+
+[sub_resource type="Animation" id="Animation_sxmc0"]
+resource_name = "close_notebook_menu"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Notebook:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 270)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotebookButton:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 300), Vector2(6, 151)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mtcgk"]
+_data = {
+"RESET": SubResource("Animation_hdoou"),
+"close_notebook_menu": SubResource("Animation_sxmc0"),
+"open_notebook_menu": SubResource("Animation_qmcg2")
+}
 
 [node name="TelecospeLayer" type="CanvasLayer"]
 
@@ -79,15 +188,250 @@ position = Vector2(60, 58)
 [node name="Item3" type="Sprite2D" parent="HUD/PuzzlePanel/InventoryIcons"]
 position = Vector2(100, 58)
 
-[node name="TextureButton" type="TextureButton" parent="HUD"]
+[node name="Notebook" type="Control" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_uyyer")
+
+[node name="NotebookButton" type="TextureButton" parent="HUD/Notebook"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 151.0
 offset_right = 95.0
-offset_bottom = 266.0
+offset_bottom = 266.001
+focus_mode = 0
 texture_normal = ExtResource("9_0rd6g")
 texture_pressed = ExtResource("10_7tuov")
 texture_hover = ExtResource("10_7tuov")
 
+[node name="Notebook" type="TextureRect" parent="HUD/Notebook"]
+layout_mode = 0
+offset_top = 270.0
+offset_right = 480.0
+offset_bottom = 540.0
+texture = ExtResource("11_qn6rk")
+
+[node name="Puzzles" type="Control" parent="HUD/Notebook/Notebook"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="POption1" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 58.0
+offset_right = 214.0
+offset_bottom = 68.0
+grow_horizontal = 1
+puzzle = ExtResource("14_bluc0")
+puzzle_name = "Carta"
+
+[node name="POption2" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 73.0
+offset_right = 214.0
+offset_bottom = 83.0
+grow_horizontal = 1
+puzzle = ExtResource("14_sqvv8")
+puzzle_name = "Conto de fadas"
+
+[node name="POption3" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 88.0
+offset_right = 214.0
+offset_bottom = 98.0
+grow_horizontal = 1
+puzzle = ExtResource("16_y2cnx")
+puzzle_name = "Nova Vida"
+
+[node name="POption4" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 103.0
+offset_right = 214.0
+offset_bottom = 113.0
+grow_horizontal = 1
+puzzle = ExtResource("17_pdqs1")
+puzzle_name = "Refeição"
+
+[node name="POption5" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 118.0
+offset_right = 214.0
+offset_bottom = 128.0
+grow_horizontal = 1
+puzzle = ExtResource("18_kxacd")
+puzzle_name = "Madeira"
+
+[node name="POption6" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 133.0
+offset_right = 214.0
+offset_bottom = 143.0
+grow_horizontal = 1
+puzzle = ExtResource("19_3bl8x")
+puzzle_name = "Verde"
+
+[node name="POption7" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 148.0
+offset_right = 214.0
+offset_bottom = 158.0
+grow_horizontal = 1
+puzzle = ExtResource("20_iisn2")
+puzzle_name = "Questão"
+
+[node name="POption8" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 163.0
+offset_right = 214.0
+offset_bottom = 173.0
+grow_horizontal = 1
+puzzle = ExtResource("21_v7vxu")
+puzzle_name = "Show"
+
+[node name="POption9" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 58.0
+offset_right = 375.0
+offset_bottom = 68.0
+grow_horizontal = 1
+puzzle = ExtResource("22_0stcj")
+puzzle_name = "Comédia"
+
+[node name="POption10" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 73.0
+offset_right = 375.0
+offset_bottom = 83.0
+grow_horizontal = 1
+puzzle = ExtResource("23_n0rkb")
+puzzle_name = "Bebida"
+
+[node name="POption11" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 88.0
+offset_right = 375.0
+offset_bottom = 98.0
+grow_horizontal = 1
+puzzle = ExtResource("24_2lrxh")
+puzzle_name = "Monstro"
+
+[node name="POption12" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 103.0
+offset_right = 375.0
+offset_bottom = 113.0
+grow_horizontal = 1
+puzzle = ExtResource("25_23t8m")
+puzzle_name = "Trava-línguas"
+
+[node name="POption13" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 118.0
+offset_right = 375.0
+offset_bottom = 128.0
+grow_horizontal = 1
+puzzle = ExtResource("26_25cdc")
+puzzle_name = "Pares"
+
+[node name="POption14" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 133.0
+offset_right = 375.0
+offset_bottom = 143.0
+grow_horizontal = 1
+puzzle = ExtResource("27_24sq4")
+puzzle_name = "Sucesso"
+
+[node name="POption15" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 148.0
+offset_right = 375.0
+offset_bottom = 158.0
+grow_horizontal = 1
+puzzle = ExtResource("28_2ou8h")
+puzzle_name = "Zodíaco"
+
+[node name="POption16" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 163.0
+offset_right = 375.0
+offset_bottom = 173.0
+grow_horizontal = 1
+puzzle = ExtResource("29_3hbvn")
+puzzle_name = "Julgamento"
+
+[node name="POption17" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 184.0
+offset_right = 375.0
+offset_bottom = 194.0
+grow_horizontal = 1
+puzzle = ExtResource("29_3hbvn")
+puzzle_name = "Constelação"
+
+[node name="CloseButton" type="Button" parent="HUD/Notebook/Notebook"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.431
+anchor_top = 0.778
+anchor_right = 0.475
+anchor_bottom = 0.889
+offset_left = 0.119995
+offset_top = -0.0600128
+offset_right = -1.52588e-05
+offset_bottom = -0.030014
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD/Notebook"]
+libraries = {
+"": SubResource("AnimationLibrary_mtcgk")
+}
+
 [connection signal="area_entered" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_exited"]
+[connection signal="pressed" from="HUD/Notebook/NotebookButton" to="HUD/Notebook" method="_on_notebook_button_pressed"]
+[connection signal="pressed" from="HUD/Notebook/Notebook/CloseButton" to="HUD/Notebook" method="_on_close_button_pressed"]
