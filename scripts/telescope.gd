@@ -13,7 +13,7 @@ var current_lens = 0
 func _ready():
 	for ico in $"../PuzzlePanel/InventoryIcons".get_children():
 		icons.append(ico)
-	set_lens(0)
+	set_lens(4)
 	Progress.checkpoint_reached.connect(_on_checkpoint_reached)
 
 func _input(event):

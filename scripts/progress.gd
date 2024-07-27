@@ -21,6 +21,7 @@ signal checkpoint_reached(level : int)
 	14: false, 
 	15: false, 
 	16: false,
+	17: false,
 }
 
 func _ready():

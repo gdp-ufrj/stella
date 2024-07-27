@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bdmaytxns1vqs"]
+[gd_scene load_steps=36 format=3 uid="uid://bdmaytxns1vqs"]
 
 [ext_resource type="Texture2D" uid="uid://b8a6kvusqpelu" path="res://assets/lens/v3/lens_4.png" id="1_2p3w2"]
 [ext_resource type="Script" path="res://scripts/telescope.gd" id="2_jau6c"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://llbkemprqkx6" path="res://assets/hud/book_hover.png" id="10_7tuov"]
 [ext_resource type="Texture2D" uid="uid://dp1rbki6iokm2" path="res://assets/hud/open_notebook.png" id="11_qn6rk"]
 [ext_resource type="PackedScene" uid="uid://drs5025ebtgk8" path="res://scenes/notebook_option.tscn" id="13_awek3"]
+[ext_resource type="Resource" uid="uid://duqpjvv3jdybm" path="res://scripts/resources/puzzles/puzzle_17.tres" id="14_8un3l"]
 [ext_resource type="Resource" uid="uid://bnkvjiwsdv2pn" path="res://scripts/resources/puzzles/puzzle_1.tres" id="14_bluc0"]
 [ext_resource type="Resource" uid="uid://brtply2blonhd" path="res://scripts/resources/puzzles/puzzle_2.tres" id="14_sqvv8"]
 [ext_resource type="Resource" uid="uid://bnqp2k0c5i1ny" path="res://scripts/resources/puzzles/puzzle_3.tres" id="16_y2cnx"]
@@ -223,7 +224,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="POption1" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="Level1" type="Control" parent="HUD/Notebook/Notebook/Puzzles"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="POption1" parent="HUD/Notebook/Notebook/Puzzles/Level1" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 104.0
@@ -234,18 +240,7 @@ grow_horizontal = 1
 puzzle = ExtResource("14_bluc0")
 puzzle_name = "Carta"
 
-[node name="POption2" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
-anchors_preset = 0
-anchor_right = 0.0
-offset_left = 104.0
-offset_top = 73.0
-offset_right = 214.0
-offset_bottom = 83.0
-grow_horizontal = 1
-puzzle = ExtResource("14_sqvv8")
-puzzle_name = "Conto de fadas"
-
-[node name="POption3" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="POption3" parent="HUD/Notebook/Notebook/Puzzles/Level1" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 104.0
@@ -256,40 +251,7 @@ grow_horizontal = 1
 puzzle = ExtResource("16_y2cnx")
 puzzle_name = "Nova Vida"
 
-[node name="POption4" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
-anchors_preset = 0
-anchor_right = 0.0
-offset_left = 104.0
-offset_top = 103.0
-offset_right = 214.0
-offset_bottom = 113.0
-grow_horizontal = 1
-puzzle = ExtResource("17_pdqs1")
-puzzle_name = "Refeição"
-
-[node name="POption5" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
-anchors_preset = 0
-anchor_right = 0.0
-offset_left = 104.0
-offset_top = 118.0
-offset_right = 214.0
-offset_bottom = 128.0
-grow_horizontal = 1
-puzzle = ExtResource("18_kxacd")
-puzzle_name = "Madeira"
-
-[node name="POption6" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
-anchors_preset = 0
-anchor_right = 0.0
-offset_left = 104.0
-offset_top = 133.0
-offset_right = 214.0
-offset_bottom = 143.0
-grow_horizontal = 1
-puzzle = ExtResource("19_3bl8x")
-puzzle_name = "Verde"
-
-[node name="POption7" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="POption7" parent="HUD/Notebook/Notebook/Puzzles/Level1" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 104.0
@@ -300,29 +262,52 @@ grow_horizontal = 1
 puzzle = ExtResource("20_iisn2")
 puzzle_name = "Questão"
 
-[node name="POption8" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="Level2" type="Control" parent="HUD/Notebook/Notebook/Puzzles"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="POption5" parent="HUD/Notebook/Notebook/Puzzles/Level2" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 104.0
-offset_top = 163.0
+offset_top = 118.0
 offset_right = 214.0
-offset_bottom = 173.0
+offset_bottom = 128.0
 grow_horizontal = 1
-puzzle = ExtResource("21_v7vxu")
-puzzle_name = "Show"
+puzzle = ExtResource("18_kxacd")
+puzzle_name = "Madeira"
 
-[node name="POption9" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="POption6" parent="HUD/Notebook/Notebook/Puzzles/Level2" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
-offset_left = 265.0
-offset_top = 58.0
-offset_right = 375.0
-offset_bottom = 68.0
+offset_left = 104.0
+offset_top = 133.0
+offset_right = 214.0
+offset_bottom = 143.0
 grow_horizontal = 1
-puzzle = ExtResource("22_0stcj")
-puzzle_name = "Comédia"
+puzzle = ExtResource("19_3bl8x")
+puzzle_name = "Verde"
 
-[node name="POption10" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="Level3" type="Control" parent="HUD/Notebook/Notebook/Puzzles"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="POption4" parent="HUD/Notebook/Notebook/Puzzles/Level3" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 103.0
+offset_right = 214.0
+offset_bottom = 113.0
+grow_horizontal = 1
+puzzle = ExtResource("17_pdqs1")
+puzzle_name = "Refeição"
+
+[node name="POption10" parent="HUD/Notebook/Notebook/Puzzles/Level3" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -333,7 +318,7 @@ grow_horizontal = 1
 puzzle = ExtResource("23_n0rkb")
 puzzle_name = "Bebida"
 
-[node name="POption11" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="POption11" parent="HUD/Notebook/Notebook/Puzzles/Level3" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -344,7 +329,24 @@ grow_horizontal = 1
 puzzle = ExtResource("24_2lrxh")
 puzzle_name = "Monstro"
 
-[node name="POption12" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="Level4" type="Control" parent="HUD/Notebook/Notebook/Puzzles"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="POption9" parent="HUD/Notebook/Notebook/Puzzles/Level4" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 265.0
+offset_top = 58.0
+offset_right = 375.0
+offset_bottom = 68.0
+grow_horizontal = 1
+puzzle = ExtResource("22_0stcj")
+puzzle_name = "Comédia"
+
+[node name="POption12" parent="HUD/Notebook/Notebook/Puzzles/Level4" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -355,7 +357,35 @@ grow_horizontal = 1
 puzzle = ExtResource("25_23t8m")
 puzzle_name = "Trava-línguas"
 
-[node name="POption13" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="Level5" type="Control" parent="HUD/Notebook/Notebook/Puzzles"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="POption2" parent="HUD/Notebook/Notebook/Puzzles/Level5" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 73.0
+offset_right = 214.0
+offset_bottom = 83.0
+grow_horizontal = 1
+puzzle = ExtResource("14_sqvv8")
+puzzle_name = "Conto de fadas"
+
+[node name="POption8" parent="HUD/Notebook/Notebook/Puzzles/Level5" instance=ExtResource("13_awek3")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 104.0
+offset_top = 163.0
+offset_right = 214.0
+offset_bottom = 173.0
+grow_horizontal = 1
+puzzle = ExtResource("21_v7vxu")
+puzzle_name = "Show"
+
+[node name="POption13" parent="HUD/Notebook/Notebook/Puzzles/Level5" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -366,7 +396,7 @@ grow_horizontal = 1
 puzzle = ExtResource("26_25cdc")
 puzzle_name = "Pares"
 
-[node name="POption14" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="POption14" parent="HUD/Notebook/Notebook/Puzzles/Level5" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -377,7 +407,7 @@ grow_horizontal = 1
 puzzle = ExtResource("27_24sq4")
 puzzle_name = "Sucesso"
 
-[node name="POption15" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="POption15" parent="HUD/Notebook/Notebook/Puzzles/Level5" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -388,7 +418,7 @@ grow_horizontal = 1
 puzzle = ExtResource("28_2ou8h")
 puzzle_name = "Zodíaco"
 
-[node name="POption16" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="POption16" parent="HUD/Notebook/Notebook/Puzzles/Level5" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -399,7 +429,13 @@ grow_horizontal = 1
 puzzle = ExtResource("29_3hbvn")
 puzzle_name = "Julgamento"
 
-[node name="POption17" parent="HUD/Notebook/Notebook/Puzzles" instance=ExtResource("13_awek3")]
+[node name="Level6" type="Control" parent="HUD/Notebook/Notebook/Puzzles"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="POption17" parent="HUD/Notebook/Notebook/Puzzles/Level6" instance=ExtResource("13_awek3")]
 anchors_preset = 0
 anchor_right = 0.0
 offset_left = 265.0
@@ -407,7 +443,7 @@ offset_top = 184.0
 offset_right = 375.0
 offset_bottom = 194.0
 grow_horizontal = 1
-puzzle = ExtResource("29_3hbvn")
+puzzle = ExtResource("14_8un3l")
 puzzle_name = "Constelação"
 
 [node name="CloseButton" type="Button" parent="HUD/Notebook/Notebook"]
