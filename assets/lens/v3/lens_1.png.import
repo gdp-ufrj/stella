@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcwtaceba0t8s"
-path="res://.godot/imported/Subtract.png-e5262d5ab26c7d9af3ccc5104c245704.ctex"
+uid="uid://cp682cw00eocq"
+path="res://.godot/imported/lens_1.png-04eb74a03549ab4f02067f2e41cb0bce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/telescopes/Subtract.png"
-dest_files=["res://.godot/imported/Subtract.png-e5262d5ab26c7d9af3ccc5104c245704.ctex"]
+source_file="res://assets/lens/v3/lens_1.png"
+dest_files=["res://.godot/imported/lens_1.png-04eb74a03549ab4f02067f2e41cb0bce.ctex"]
 
 [params]
 

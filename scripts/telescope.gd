@@ -53,10 +53,10 @@ func is_completely_inside(star: Area2D) -> bool:
 
 	return true
 
-func set_lens(size : int):
-	if size >= len(lens) or size < 0: return
-	texture = lens[size]
-	collision_shape_2d.shape.radius = lens_radius[size]
+func set_lens(level : int):
+	if level >= len(lens) or level < 0: return
+	texture = lens[level]
+	collision_shape_2d.shape.radius = lens_radius[level]
 
 func set_hint_text():
 	if GameStatus.current_puzzle: 
@@ -65,10 +65,10 @@ func set_hint_text():
 		hint_label.text = ""
 
 func set_icons():
-	var size = len(GameStatus.inventory)
+	var length = len(GameStatus.inventory)
 	
-	for i in range(size):
+	for i in range(length):
 		icons[i].texture = GameStatus.inventory[i].sprite_mini
 	
-	for i in range(size, GameStatus.IMAGE_LIMIT):
+	for i in range(length, GameStatus.IMAGE_LIMIT):
 		icons[i].texture = null

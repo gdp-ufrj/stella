@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do70y3dakxb26"
-path="res://.godot/imported/telescopio_mock.png-189156835b71dbe10881c351fced3c95.ctex"
+uid="uid://llbkemprqkx6"
+path="res://.godot/imported/book_hover.png-b1f79c3a86b601a9806b85eed140852b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/telescopes/telescopio_mock.png"
-dest_files=["res://.godot/imported/telescopio_mock.png-189156835b71dbe10881c351fced3c95.ctex"]
+source_file="res://assets/hud/book_hover.png"
+dest_files=["res://.godot/imported/book_hover.png-b1f79c3a86b601a9806b85eed140852b.ctex"]
 
 [params]
 

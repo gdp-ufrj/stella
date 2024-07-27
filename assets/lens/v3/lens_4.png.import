@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmj38fygov06j"
-path="res://.godot/imported/bg_image.png-9432cdfd980477b0dcf6ec88014221a7.ctex"
+uid="uid://b8a6kvusqpelu"
+path="res://.godot/imported/lens_4.png-668790585375df4f87c2f8db84b23b81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lens/v2/bg_image.png"
-dest_files=["res://.godot/imported/bg_image.png-9432cdfd980477b0dcf6ec88014221a7.ctex"]
+source_file="res://assets/lens/v3/lens_4.png"
+dest_files=["res://.godot/imported/lens_4.png-668790585375df4f87c2f8db84b23b81.ctex"]
 
 [params]
 

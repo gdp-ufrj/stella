@@ -6,7 +6,7 @@ extends TextureRect
 func _ready():
 	print(size)
 
-func _process(delta):
+func _process(_delta):
 	move()
 
 func move():

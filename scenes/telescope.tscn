@@ -1,13 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdmaytxns1vqs"]
+[gd_scene load_steps=12 format=3 uid="uid://bdmaytxns1vqs"]
 
-[ext_resource type="Texture2D" uid="uid://ckc8xou7xgg0t" path="res://assets/lens/v2/lens_4.png" id="1_gbpfs"]
+[ext_resource type="Texture2D" uid="uid://b8a6kvusqpelu" path="res://assets/lens/v3/lens_4.png" id="1_2p3w2"]
 [ext_resource type="Script" path="res://scripts/telescope.gd" id="2_jau6c"]
-[ext_resource type="Texture2D" uid="uid://c2veg3jb042aq" path="res://assets/lens/v2/lens_0.png" id="3_ym13v"]
-[ext_resource type="Texture2D" uid="uid://daj48qra3m2vu" path="res://assets/lens/v2/lens_1.png" id="4_uxe4m"]
-[ext_resource type="Texture2D" uid="uid://btbnujd6h67fo" path="res://assets/lens/v2/lens_2.png" id="5_232y5"]
-[ext_resource type="Texture2D" uid="uid://b2ynuwynb3um0" path="res://assets/lens/v2/lens_3.png" id="6_ugdpk"]
-[ext_resource type="Texture2D" uid="uid://bxqyemjfqoj3w" path="res://assets/hud/HUD.png" id="7_dooed"]
-[ext_resource type="FontFile" uid="uid://c4t2m7h42o653" path="res://assets/fonts/PixelDigivolve-mOm9.ttf" id="8_kreqs"]
+[ext_resource type="Texture2D" uid="uid://21eygx4soelu" path="res://assets/lens/v3/lens_0.png" id="3_r12v5"]
+[ext_resource type="Texture2D" uid="uid://cp682cw00eocq" path="res://assets/lens/v3/lens_1.png" id="4_63n67"]
+[ext_resource type="Texture2D" uid="uid://ctxftvgwovirb" path="res://assets/lens/v3/lens_2.png" id="5_kephr"]
+[ext_resource type="Texture2D" uid="uid://dcktgiwew4uj7" path="res://assets/lens/v3/lens_3.png" id="6_pnaf4"]
+[ext_resource type="Texture2D" uid="uid://brtud6bb558dg" path="res://assets/hud/HUD_v2.png" id="7_nmidp"]
+[ext_resource type="FontFile" uid="uid://71j4oljo4i6m" path="res://assets/fonts/Pixeled.ttf" id="8_lvsta"]
+[ext_resource type="Texture2D" uid="uid://wqetntdq63yo" path="res://assets/hud/book_default.png" id="9_0rd6g"]
+[ext_resource type="Texture2D" uid="uid://llbkemprqkx6" path="res://assets/hud/book_hover.png" id="10_7tuov"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3b5au"]
 radius = 122.0
@@ -29,10 +31,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_gbpfs")
+texture = ExtResource("1_2p3w2")
 expand_mode = 2
 script = ExtResource("2_jau6c")
-lens = Array[Texture]([ExtResource("3_ym13v"), ExtResource("4_uxe4m"), ExtResource("5_232y5"), ExtResource("6_ugdpk"), ExtResource("1_gbpfs")])
+lens = Array[Texture]([ExtResource("3_r12v5"), ExtResource("4_63n67"), ExtResource("5_kephr"), ExtResource("6_pnaf4"), ExtResource("1_2p3w2")])
 lens_radius = Array[int]([43, 56, 75, 98, 122])
 
 [node name="Area2D" type="Area2D" parent="HUD/TelescopeMask"]
@@ -48,21 +50,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_dooed")
+texture = ExtResource("7_nmidp")
 
 [node name="HintText" type="Label" parent="HUD/PuzzlePanel"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 7.0
-offset_right = 127.0
-offset_bottom = 30.0
-theme_override_constants/line_spacing = -2
-theme_override_fonts/font = ExtResource("8_kreqs")
-theme_override_font_sizes/font_size = 10
-text = "O necessário para escrever uma carta"
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 124.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.85098, 1, 0.886275, 1)
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("8_lvsta")
+theme_override_font_sizes/font_size = 5
+text = "TEST HINT
+TEST HINT
+"
 autowrap_mode = 2
-clip_text = true
-text_overrun_behavior = 4
+uppercase = true
 
 [node name="InventoryIcons" type="Node" parent="HUD/PuzzlePanel"]
 
@@ -74,6 +78,16 @@ position = Vector2(60, 58)
 
 [node name="Item3" type="Sprite2D" parent="HUD/PuzzlePanel/InventoryIcons"]
 position = Vector2(100, 58)
+
+[node name="TextureButton" type="TextureButton" parent="HUD"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 151.0
+offset_right = 95.0
+offset_bottom = 266.0
+texture_normal = ExtResource("9_0rd6g")
+texture_pressed = ExtResource("10_7tuov")
+texture_hover = ExtResource("10_7tuov")
 
 [connection signal="area_entered" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="HUD/TelescopeMask/Area2D" to="HUD/TelescopeMask" method="_on_area_2d_area_exited"]

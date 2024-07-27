@@ -8,7 +8,7 @@ const IMAGE_LIMIT = 3
 signal puzzle_completed(id : int)
 
 func _ready():
-	var p = load("res://scripts/resources/puzzles/puzzle_2.tres")
+	var p = load("res://scripts/resources/puzzles/puzzle_4.tres")
 	set_current_puzzle(p)
 
 func add_new_image(img : Constellation) -> bool:

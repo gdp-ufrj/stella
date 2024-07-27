@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c4t2m7h42o653"
-path="res://.godot/imported/PixelDigivolve-mOm9.ttf-c7a2d34fe618f695d25c3f3cd664be5f.fontdata"
+uid="uid://71j4oljo4i6m"
+path="res://.godot/imported/Pixeled.ttf-e8bbf35245fcf80d16d4c25fafd33f1f.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/PixelDigivolve-mOm9.ttf"
-dest_files=["res://.godot/imported/PixelDigivolve-mOm9.ttf-c7a2d34fe618f695d25c3f3cd664be5f.fontdata"]
+source_file="res://assets/fonts/Pixeled.ttf"
+dest_files=["res://.godot/imported/Pixeled.ttf-e8bbf35245fcf80d16d4c25fafd33f1f.fontdata"]
 
 [params]
 
