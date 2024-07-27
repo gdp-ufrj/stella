@@ -1,6 +1,9 @@
 extends Node
 
+signal checkpoint_reached(level : int)
+
 @onready var completed_count = 0
+@onready var checkpoints : Array[int] = [1,4,6,8,10]
 @onready var puzzles_status = {
 	1: false,
 	2: false,
@@ -31,3 +34,6 @@ func _on_game_status_puzzle_completed(id : int):
 
 func update_completed_count():
 	completed_count += 1
+	var check = checkpoints.find(completed_count)
+	if check == -1: return
+	checkpoint_reached.emit(check)

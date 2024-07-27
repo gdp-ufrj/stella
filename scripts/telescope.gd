@@ -13,7 +13,8 @@ var current_lens = 0
 func _ready():
 	for ico in $"../PuzzlePanel/InventoryIcons".get_children():
 		icons.append(ico)
-	set_lens(4)
+	set_lens(0)
+	Progress.checkpoint_reached.connect(_on_checkpoint_reached)
 
 func _input(event):
 	if event.is_action_pressed("select"):
@@ -32,6 +33,9 @@ func _on_area_2d_area_entered(area):
 	
 func _on_area_2d_area_exited(area):
 	contained_stars.erase(area)
+
+func _on_checkpoint_reached(level : int):
+	set_lens(level+1)
 
 func is_completely_inside(star: Area2D) -> bool:
 	var telescope_center : Vector2 = area_2d.global_position
