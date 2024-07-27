@@ -7,7 +7,8 @@ func _ready():
 	print(size)
 
 func _process(_delta):
-	move()
+	if GameStatus.current_state == GameStatus.GAME_STATE.EXPLORATION:
+		move()
 
 func move():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
