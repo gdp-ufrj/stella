@@ -7,10 +7,6 @@ const IMAGE_LIMIT = 3
 
 signal puzzle_completed(id : int)
 
-func _ready():
-	var p = load("res://scripts/resources/puzzles/puzzle_4.tres")
-	set_current_puzzle(p)
-
 func add_new_image(img : Constellation) -> bool:
 	if len(inventory) >= IMAGE_LIMIT: return false
 	if inventory.has(img): return false

@@ -16,6 +16,6 @@ func move():
 
 func clamp_pos(pos):
 	var new_pos : Vector2
-	new_pos.x = clamp(pos.x, -size.x + get_viewport_rect().size.x, 0)
-	new_pos.y = clamp(pos.y, -size.y + get_viewport_rect().size.y, 0)
+	new_pos.x = clamp(pos.x, -size.x + get_viewport_rect().size.x - 109, 109)
+	new_pos.y = clamp(pos.y, -size.y + get_viewport_rect().size.y - 4, 4)
 	return new_pos

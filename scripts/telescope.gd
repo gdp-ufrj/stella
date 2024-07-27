@@ -13,7 +13,7 @@ var current_lens = 0
 func _ready():
 	for ico in $"../PuzzlePanel/InventoryIcons".get_children():
 		icons.append(ico)
-	set_lens(-1)
+	set_lens(4)
 
 func _input(event):
 	if event.is_action_pressed("select"):
