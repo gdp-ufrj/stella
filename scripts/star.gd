@@ -1,4 +1,5 @@
 extends Area2D
+class_name Star
 
 @export var constellation : Constellation
 @export var size : STAR_SIZES
@@ -20,7 +21,6 @@ func _ready():
 
 func select_star():
 	if not GameStatus.add_new_image(constellation): return
-	sprite_2d.texture = constellation.sprite_full
 
 func init_star_size():
 	match size:
@@ -38,3 +38,7 @@ func init_star_size():
 		STAR_SIZES.LARGEST:
 			collision_shape.shape.size = Vector2(150, 150)
 			sprite_2d.scale = Vector2(3, 3)
+	
+func mark_selectable(selected : bool):
+	var current_sprite = constellation.sprite_full if selected else constellation.sprite_stars
+	sprite_2d.texture = current_sprite

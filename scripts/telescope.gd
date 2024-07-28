@@ -7,6 +7,8 @@ extends TextureRect
 @onready var hint_label : Label = $"../PuzzlePanel/HintText"
 
 var contained_stars : Array = []
+var last_selectable : Star
+var current_selectable : Star
 var icons : Array[Sprite2D]
 var current_lens = 0
 
@@ -17,10 +19,10 @@ func _ready():
 	Progress.checkpoint_reached.connect(_on_checkpoint_reached)
 
 func _input(event):
+	mark_selected()
 	if event.is_action_pressed("select"):
-		for star in contained_stars:
-			if not is_completely_inside(star): continue
-			star.select_star()
+		if not current_selectable: return
+		current_selectable.select_star()
 	if event.is_action_pressed("combine"):
 		GameStatus.verify_solution()
 
@@ -33,6 +35,21 @@ func _on_area_2d_area_entered(area):
 	
 func _on_area_2d_area_exited(area):
 	contained_stars.erase(area)
+	
+func check_current_selectable() -> Star:
+	for star in contained_stars:
+		if is_completely_inside(star): return star
+	return null
+	
+func mark_selected():
+	last_selectable = current_selectable
+	current_selectable = check_current_selectable()
+	
+	if current_selectable == null and last_selectable != null:
+		last_selectable.mark_selectable(false)
+	
+	if current_selectable != null and last_selectable == null:
+		current_selectable.mark_selectable(true)
 
 func _on_checkpoint_reached(level : int):
 	set_lens(level+1)

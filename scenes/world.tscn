@@ -19,7 +19,7 @@
 [ext_resource type="Resource" uid="uid://bmcyeqwnyoh3p" path="res://scripts/resources/constellations/spider.tres" id="17_ns4q6"]
 [ext_resource type="Resource" uid="uid://bc2oojecgkh14" path="res://scripts/resources/constellations/scales.tres" id="18_ms3vm"]
 [ext_resource type="Resource" uid="uid://c66iwtf4q3n7x" path="res://scripts/resources/constellations/guitar.tres" id="19_tyqi6"]
-[ext_resource type="Resource" uid="uid://b83g6yhpjwqoj" path="res://scripts/resources/constellations/star.tres" id="20_lnkh2"]
+[ext_resource type="Resource" path="res://scripts/resources/constellations/star.tres" id="20_lnkh2"]
 
 [node name="World" type="Node2D"]
 
