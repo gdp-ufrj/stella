@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://g772xuc6yd3e"]
+
+[ext_resource type="Texture2D" uid="uid://cfjxh65au66v1" path="res://assets/dialogo_lyra.png" id="1_2yp8g"]
+
+[resource]
+texture = ExtResource("1_2yp8g")
+expand_margin_left = 5.0
+expand_margin_top = 75.0
+expand_margin_right = 5.0

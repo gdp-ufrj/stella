@@ -17,6 +17,7 @@ func _ready():
 		icons.append(ico)
 	set_lens(current_lens)
 	Progress.checkpoint_reached.connect(_on_checkpoint_reached)
+	Dialogic.start("level1")
 
 func _input(event):
 	mark_selected()
@@ -60,6 +61,7 @@ func mark_selected():
 
 func _on_checkpoint_reached(level : int):
 	set_lens(level+1)
+	Dialogic.start("level" + str(level + 2))
 
 func is_completely_inside(star: Area2D) -> bool:
 	var telescope_center : Vector2 = area_2d.global_position

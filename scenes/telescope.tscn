@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://llbkemprqkx6" path="res://assets/hud/book_hover.png" id="10_7tuov"]
 [ext_resource type="Texture2D" uid="uid://dp1rbki6iokm2" path="res://assets/hud/open_notebook.png" id="11_qn6rk"]
 [ext_resource type="PackedScene" uid="uid://drs5025ebtgk8" path="res://scenes/notebook_option.tscn" id="13_awek3"]
-[ext_resource type="Resource" uid="uid://duqpjvv3jdybm" path="res://scripts/resources/puzzles/puzzle_17.tres" id="14_8un3l"]
+[ext_resource type="Resource" path="res://scripts/resources/puzzles/puzzle_17.tres" id="14_8un3l"]
 [ext_resource type="Resource" uid="uid://bnkvjiwsdv2pn" path="res://scripts/resources/puzzles/puzzle_1.tres" id="14_bluc0"]
 [ext_resource type="Resource" uid="uid://brtply2blonhd" path="res://scripts/resources/puzzles/puzzle_2.tres" id="14_sqvv8"]
 [ext_resource type="Resource" uid="uid://bnqp2k0c5i1ny" path="res://scripts/resources/puzzles/puzzle_3.tres" id="16_y2cnx"]
@@ -128,34 +128,6 @@ _data = {
 "open_notebook_menu": SubResource("Animation_qmcg2")
 }
 
-[sub_resource type="Animation" id="Animation_s7w6o"]
-resource_name = "screen_bright"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("EndScreen:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("EndScreen/Label:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
 [sub_resource type="Animation" id="Animation_ca6o1"]
 length = 0.001
 tracks/0/type = "value"
@@ -208,6 +180,34 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s7w6o"]
+resource_name = "screen_bright"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EndScreen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EndScreen/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qw7in"]
