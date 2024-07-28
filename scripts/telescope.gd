@@ -17,9 +17,11 @@ func _ready():
 		icons.append(ico)
 	set_lens(current_lens)
 	Progress.checkpoint_reached.connect(_on_checkpoint_reached)
-	Dialogic.start("level1")
+	Dialogic.timeline_ended.connect(on_end_dialogue)
+	on_start_dialogue("level1")
 
 func _input(event):
+	if GameStatus.current_state != GameStatus.GAME_STATE.EXPLORATION: return
 	mark_selected()
 	if event.is_action_pressed("select"):
 		if not current_selectable: return
@@ -61,7 +63,7 @@ func mark_selected():
 
 func _on_checkpoint_reached(level : int):
 	set_lens(level+1)
-	Dialogic.start("level" + str(level + 2))
+	on_start_dialogue("level" + str(level + 2))
 
 func is_completely_inside(star: Area2D) -> bool:
 	var telescope_center : Vector2 = area_2d.global_position
@@ -102,3 +104,10 @@ func set_icons():
 	
 	for i in range(length, GameStatus.IMAGE_LIMIT):
 		icons[i].texture = null
+
+func on_start_dialogue(timeline : String):
+	Dialogic.start(timeline)
+	GameStatus.change_state(GameStatus.GAME_STATE.DIALOG)
+	
+func on_end_dialogue():
+	GameStatus.change_state(GameStatus.GAME_STATE.EXPLORATION)

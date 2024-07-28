@@ -6,6 +6,7 @@ const IMAGE_LIMIT = 3
 enum GAME_STATE {
 	EXPLORATION,
 	NOTEBOOK,
+	DIALOG
 }
 
 @onready var inventory : Array[Constellation] = []

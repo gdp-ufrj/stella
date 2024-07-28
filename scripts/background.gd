@@ -9,8 +9,8 @@ func _ready():
 	constellations = get_children()
 
 func _process(_delta):
-	if GameStatus.current_state == GameStatus.GAME_STATE.EXPLORATION:
-		move()
+	if GameStatus.current_state != GameStatus.GAME_STATE.EXPLORATION: return
+	move()
 
 func _on_checkpoint_reached(level : int):
 	constellations[level+1].show()
