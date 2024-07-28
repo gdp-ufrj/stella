@@ -29,6 +29,7 @@ func _input(event):
 		AudioManager.play_sfx("combine")
 	if event.is_action_pressed("restart"):
 		GameStatus.empty_inventory()
+		AudioManager.play_sfx("restart")
 
 func _process(_delta):
 	set_icons()
