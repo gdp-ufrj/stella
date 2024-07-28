@@ -33,7 +33,7 @@ func _on_game_status_puzzle_completed(id : int):
 	if id == 17: 
 		puzzle_done.emit("screen_bright")
 	else:
-		puzzle_done.emit("correct")
+		puzzle_done.emit("correct_glow")
 	
 	puzzles_status[id] = true
 	update_completed_count()

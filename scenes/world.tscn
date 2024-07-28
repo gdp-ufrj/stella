@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cj8hhckb25efi"]
+[gd_scene load_steps=22 format=3 uid="uid://cj8hhckb25efi"]
 
 [ext_resource type="PackedScene" uid="uid://bdmaytxns1vqs" path="res://scenes/telescope.tscn" id="1_5pv46"]
 [ext_resource type="Texture2D" uid="uid://c7oxqaxvtob8v" path="res://assets/bg_image.png" id="2_48iha"]
@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://bc2oojecgkh14" path="res://scripts/resources/constellations/scales.tres" id="18_ms3vm"]
 [ext_resource type="Resource" uid="uid://c66iwtf4q3n7x" path="res://scripts/resources/constellations/guitar.tres" id="19_tyqi6"]
 [ext_resource type="Resource" uid="uid://b83g6yhpjwqoj" path="res://scripts/resources/constellations/star.tres" id="20_lnkh2"]
+[ext_resource type="AudioStream" uid="uid://djx4ibwcvrf61" path="res://assets/audio/bad_select_sfx.wav" id="21_qeyf3"]
 
 [node name="World" type="Node2D"]
 
@@ -130,3 +131,7 @@ anchors_preset = 0
 [node name="Star" parent="Background/Level6" instance=ExtResource("4_aq1hn")]
 position = Vector2(340, 218)
 constellation = ExtResource("20_lnkh2")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_qeyf3")
+autoplay = true

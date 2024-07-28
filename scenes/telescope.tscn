@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bdmaytxns1vqs"]
+[gd_scene load_steps=44 format=3 uid="uid://bdmaytxns1vqs"]
 
 [ext_resource type="Texture2D" uid="uid://b8a6kvusqpelu" path="res://assets/lens/v3/lens_4.png" id="1_2p3w2"]
 [ext_resource type="Texture2D" uid="uid://na5lo8epugis" path="res://assets/hud/anel.png" id="1_pmwkb"]
@@ -33,6 +33,7 @@
 [ext_resource type="Resource" uid="uid://0i5tm7q2ajri" path="res://scripts/resources/puzzles/puzzle_15.tres" id="28_2ou8h"]
 [ext_resource type="Resource" uid="uid://dmul32x6gqi5s" path="res://scripts/resources/puzzles/puzzle_16.tres" id="29_3hbvn"]
 [ext_resource type="Script" path="res://scenes/screen_effects.gd" id="33_ln3e7"]
+[ext_resource type="Texture2D" uid="uid://c3pxv3hvg4ndr" path="res://assets/screen_fx_correct.png" id="34_0c6ob"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3b5au"]
 radius = 122.0
@@ -181,10 +182,38 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CorrectGlow:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sqw6u"]
+resource_name = "correct_glow"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CorrectGlow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qw7in"]
 _data = {
 "RESET": SubResource("Animation_ca6o1"),
+"correct_glow": SubResource("Animation_sqw6u"),
 "screen_bright": SubResource("Animation_s7w6o")
 }
 
@@ -559,6 +588,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("33_ln3e7")
+
+[node name="CorrectGlow" type="TextureRect" parent="ScreenEffects"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("34_0c6ob")
 
 [node name="EndScreen" type="ColorRect" parent="ScreenEffects"]
 layout_mode = 1
