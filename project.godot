@@ -13,20 +13,19 @@ config_version=5
 config/name="Ctrl Alt Frame"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://assets/icon.svg"
+config/icon="res://assets/icon.png"
 
 [autoload]
 
 GameStatus="*res://scripts/game_status.gd"
 Progress="*res://scripts/progress.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+AudioManager="*res://scripts/audio_manager.gd"
 
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={
-"gustavo": "res://gustavo.dtl"
-}
+directories/dtl_directory={}
 
 [display]
 
