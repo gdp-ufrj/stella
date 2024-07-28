@@ -23,8 +23,10 @@ func _input(event):
 	if event.is_action_pressed("select"):
 		if not current_selectable: return
 		current_selectable.select_star()
+		AudioManager.play_sfx("select")
 	if event.is_action_pressed("combine"):
 		GameStatus.verify_solution()
+		AudioManager.play_sfx("combine")
 	if event.is_action_pressed("restart"):
 		GameStatus.empty_inventory()
 
