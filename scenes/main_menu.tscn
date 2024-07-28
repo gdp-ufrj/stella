@@ -1,0 +1,172 @@
+[gd_scene load_steps=24 format=3 uid="uid://bno6m3e7506ps"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_01v6c"]
+[ext_resource type="Script" path="res://scripts/AnimatedTextureRect.gd" id="1_hi5i8"]
+[ext_resource type="Texture2D" uid="uid://cuw22u3ha412q" path="res://assets/bg_main_menu.png" id="2_66xr6"]
+[ext_resource type="Texture2D" uid="uid://bd13xqanv3i4x" path="res://assets/hud/menu_buttons/Jogar.png" id="4_b0f82"]
+[ext_resource type="Texture2D" uid="uid://b80y6b06nj47h" path="res://assets/hud/menu_buttons/creditos.png" id="5_6b3un"]
+[ext_resource type="Texture2D" uid="uid://bmnrx0165c7j7" path="res://assets/hud/menu_buttons/sair.png" id="6_sguxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x3kr"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(0, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj7jc"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(480, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opq8l"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(960, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ycrd"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(1440, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny2ov"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(1920, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxmwd"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(2400, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b04l"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(2880, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raqkh"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(3360, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoqas"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(3840, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4b4j"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(4320, 0, 480, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cji1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5x3kr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jj7jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opq8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ycrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny2ov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxmwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b04l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raqkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoqas")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_y4b4j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myjlc"]
+atlas = ExtResource("4_b0f82")
+region = Rect2(0, 0, 56, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx2jb"]
+atlas = ExtResource("4_b0f82")
+region = Rect2(56, 0, 56, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41yuo"]
+atlas = ExtResource("5_6b3un")
+region = Rect2(56, 0, 56, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_865fw"]
+atlas = ExtResource("5_6b3un")
+region = Rect2(0, 0, 56, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwiga"]
+atlas = ExtResource("6_sguxv")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tephr"]
+atlas = ExtResource("6_sguxv")
+region = Rect2(10, 0, 10, 10)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -480.0
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01v6c")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = SubResource("AtlasTexture_5x3kr")
+script = ExtResource("1_hi5i8")
+sprites = SubResource("SpriteFrames_cji1w")
+auto_play = true
+playing = true
+
+[node name="Start" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 215.0
+offset_top = 182.0
+offset_right = 271.0
+offset_bottom = 192.0
+focus_neighbor_bottom = NodePath("../Credits")
+texture_normal = SubResource("AtlasTexture_myjlc")
+texture_pressed = SubResource("AtlasTexture_vx2jb")
+texture_hover = SubResource("AtlasTexture_vx2jb")
+texture_focused = SubResource("AtlasTexture_vx2jb")
+
+[node name="Credits" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 215.0
+offset_top = 201.0
+offset_right = 271.0
+offset_bottom = 213.0
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Quit")
+texture_normal = SubResource("AtlasTexture_41yuo")
+texture_pressed = SubResource("AtlasTexture_865fw")
+texture_hover = SubResource("AtlasTexture_865fw")
+texture_focused = SubResource("AtlasTexture_865fw")
+
+[node name="Quit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 256.0
+offset_right = 475.0
+offset_bottom = 266.0
+focus_neighbor_top = NodePath("../Credits")
+texture_normal = SubResource("AtlasTexture_fwiga")
+texture_pressed = SubResource("AtlasTexture_tephr")
+texture_hover = SubResource("AtlasTexture_tephr")
+texture_focused = SubResource("AtlasTexture_tephr")
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
