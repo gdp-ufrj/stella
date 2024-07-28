@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvclbm477yv57"]
+[gd_scene load_steps=6 format=3 uid="uid://ddd8ivq5k36oy"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_qgbtj"]
 [ext_resource type="Texture2D" uid="uid://big11vkmuu4n4" path="res://assets/bg_creditos.png" id="2_shvig"]
@@ -34,9 +34,9 @@ texture = ExtResource("2_shvig")
 [node name="Confirm" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 210.0
-offset_top = 232.0
+offset_top = 252.0
 offset_right = 266.0
-offset_bottom = 241.0
+offset_bottom = 261.0
 texture_normal = SubResource("AtlasTexture_0pd8w")
 texture_pressed = SubResource("AtlasTexture_cla3p")
 texture_hover = SubResource("AtlasTexture_cla3p")

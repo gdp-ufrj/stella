@@ -19,8 +19,8 @@ config/icon="res://assets/icon.png"
 
 GameStatus="*res://scripts/game_status.gd"
 Progress="*res://scripts/progress.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AudioManager="*res://scripts/audio_manager.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 

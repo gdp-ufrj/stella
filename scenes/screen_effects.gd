@@ -7,6 +7,8 @@ func _ready():
 
 func _on_play_screen_effect(effect : String):
 	animation_player.play(effect)
+	if effect == "screen_bright":
+		GameStatus.change_state(GameStatus.GAME_STATE.DIALOG) # Make a END state
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "screen_bright":
