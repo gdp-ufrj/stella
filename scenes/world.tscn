@@ -23,17 +23,20 @@ script = ExtResource("3_s01xt")
 speed = 5.0
 
 [node name="Fox" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(606, 143)
+position = Vector2(496, 220)
 constellation = ExtResource("5_nnl8j")
 
 [node name="Pumpkin" parent="Background" instance=ExtResource("4_aq1hn")]
 position = Vector2(114, 112)
 constellation = ExtResource("6_7yja2")
+size = 1
 
 [node name="Shoes" parent="Background" instance=ExtResource("4_aq1hn")]
 position = Vector2(116, 380)
 constellation = ExtResource("7_8g724")
+size = 2
 
 [node name="Clock" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(483, 387)
+position = Vector2(489, 371)
 constellation = ExtResource("8_1qmx2")
+size = 4
