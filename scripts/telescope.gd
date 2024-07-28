@@ -25,6 +25,8 @@ func _input(event):
 		current_selectable.select_star()
 	if event.is_action_pressed("combine"):
 		GameStatus.verify_solution()
+	if event.is_action_pressed("restart"):
+		GameStatus.empty_inventory()
 
 func _process(_delta):
 	set_icons()
