@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://b80y6b06nj47h" path="res://assets/hud/menu_buttons/creditos.png" id="5_6b3un"]
 [ext_resource type="Texture2D" uid="uid://bmnrx0165c7j7" path="res://assets/hud/menu_buttons/sair.png" id="6_sguxv"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ycrd"]
+atlas = ExtResource("2_66xr6")
+region = Rect2(1440, 0, 480, 270)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5x3kr"]
 atlas = ExtResource("2_66xr6")
 region = Rect2(0, 0, 480, 270)
@@ -18,10 +22,6 @@ region = Rect2(480, 0, 480, 270)
 [sub_resource type="AtlasTexture" id="AtlasTexture_opq8l"]
 atlas = ExtResource("2_66xr6")
 region = Rect2(960, 0, 480, 270)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ycrd"]
-atlas = ExtResource("2_66xr6")
-region = Rect2(1440, 0, 480, 270)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ny2ov"]
 atlas = ExtResource("2_66xr6")
@@ -124,9 +124,10 @@ script = ExtResource("1_01v6c")
 layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
-texture = SubResource("AtlasTexture_5x3kr")
+texture = SubResource("AtlasTexture_3ycrd")
 script = ExtResource("1_hi5i8")
 sprites = SubResource("SpriteFrames_cji1w")
+frame_index = 3
 auto_play = true
 playing = true
 
