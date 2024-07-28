@@ -3,7 +3,7 @@ extends Node
 signal checkpoint_reached(level : int)
 
 @onready var completed_count = 0
-@onready var checkpoints : Array[int] = [1,4,6,8,10]
+@onready var checkpoints : Array[int] = [2,4,6,8,10]
 @onready var puzzles_status = {
 	1: false,
 	2: false,

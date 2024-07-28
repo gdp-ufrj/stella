@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cj8hhckb25efi"]
+[gd_scene load_steps=21 format=3 uid="uid://cj8hhckb25efi"]
 
 [ext_resource type="PackedScene" uid="uid://bdmaytxns1vqs" path="res://scenes/telescope.tscn" id="1_5pv46"]
 [ext_resource type="Texture2D" uid="uid://c7oxqaxvtob8v" path="res://assets/bg_image.png" id="2_48iha"]
@@ -8,6 +8,18 @@
 [ext_resource type="Resource" uid="uid://d3q0v46w5tf82" path="res://scripts/resources/constellations/pumpkin.tres" id="6_7yja2"]
 [ext_resource type="Resource" uid="uid://cnrwarqg8doh1" path="res://scripts/resources/constellations/shoes.tres" id="7_8g724"]
 [ext_resource type="Resource" uid="uid://dl6bueiwcngih" path="res://scripts/resources/constellations/clock.tres" id="8_1qmx2"]
+[ext_resource type="Resource" uid="uid://5bwba1lirjtf" path="res://scripts/resources/constellations/inkwell.tres" id="9_wqppx"]
+[ext_resource type="Resource" uid="uid://cfiqiruc7qq72" path="res://scripts/resources/constellations/feather.tres" id="10_ngmmh"]
+[ext_resource type="Resource" uid="uid://dp2dgwgtd7vdk" path="res://scripts/resources/constellations/egg.tres" id="11_6jnvg"]
+[ext_resource type="Resource" uid="uid://bip7btlmn1par" path="res://scripts/resources/constellations/sapling.tres" id="12_03jln"]
+[ext_resource type="Resource" uid="uid://b6hqkrklao82o" path="res://scripts/resources/constellations/battery.tres" id="13_0arie"]
+[ext_resource type="Resource" uid="uid://bmew3vbdu83b8" path="res://scripts/resources/constellations/water_jug.tres" id="14_o4ky3"]
+[ext_resource type="Resource" uid="uid://b3l2qnrhvldht" path="res://scripts/resources/constellations/fish.tres" id="15_gxjuo"]
+[ext_resource type="Resource" uid="uid://bsv26uk2p0pjr" path="res://scripts/resources/constellations/microphone.tres" id="16_ihylb"]
+[ext_resource type="Resource" uid="uid://bmcyeqwnyoh3p" path="res://scripts/resources/constellations/spider.tres" id="17_ns4q6"]
+[ext_resource type="Resource" uid="uid://bc2oojecgkh14" path="res://scripts/resources/constellations/scales.tres" id="18_ms3vm"]
+[ext_resource type="Resource" uid="uid://c66iwtf4q3n7x" path="res://scripts/resources/constellations/guitar.tres" id="19_tyqi6"]
+[ext_resource type="Resource" uid="uid://b83g6yhpjwqoj" path="res://scripts/resources/constellations/star.tres" id="20_lnkh2"]
 
 [node name="World" type="Node2D"]
 
@@ -23,20 +35,77 @@ script = ExtResource("3_s01xt")
 speed = 5.0
 
 [node name="Fox" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(496, 220)
+position = Vector2(503, 83)
 constellation = ExtResource("5_nnl8j")
+size = 3
 
 [node name="Pumpkin" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(114, 112)
+position = Vector2(352, 95)
 constellation = ExtResource("6_7yja2")
-size = 1
-
-[node name="Shoes" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(116, 380)
-constellation = ExtResource("7_8g724")
 size = 2
 
-[node name="Clock" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(489, 371)
-constellation = ExtResource("8_1qmx2")
+[node name="Shoes" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(111, 416)
+constellation = ExtResource("7_8g724")
 size = 4
+
+[node name="Clock" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(740, 412)
+constellation = ExtResource("8_1qmx2")
+size = 1
+
+[node name="Inkwell" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(636, 142)
+constellation = ExtResource("9_wqppx")
+
+[node name="Feather" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(464, 202)
+constellation = ExtResource("10_ngmmh")
+
+[node name="Egg" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(441, 414)
+constellation = ExtResource("11_6jnvg")
+
+[node name="Sapling" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(211, 187)
+constellation = ExtResource("12_03jln")
+
+[node name="Battery" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(87, 291)
+constellation = ExtResource("13_0arie")
+size = 1
+
+[node name="Jug" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(266, 410)
+constellation = ExtResource("14_o4ky3")
+size = 2
+
+[node name="Fish" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(635, 302)
+constellation = ExtResource("15_gxjuo")
+size = 2
+
+[node name="Microphone" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(582, 416)
+constellation = ExtResource("16_ihylb")
+size = 3
+
+[node name="Spider" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(754, 252)
+constellation = ExtResource("17_ns4q6")
+size = 3
+
+[node name="Scales" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(746, 86)
+constellation = ExtResource("18_ms3vm")
+size = 4
+
+[node name="Guitar" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(100, 103)
+constellation = ExtResource("19_tyqi6")
+size = 4
+
+[node name="Star" parent="Background" instance=ExtResource("4_aq1hn")]
+position = Vector2(339, 254)
+constellation = ExtResource("20_lnkh2")
+size = 3
