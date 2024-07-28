@@ -6,6 +6,7 @@ class_name Star
 
 @onready var sprite_2d : Sprite2D = $Icon
 @onready var collision_shape : CollisionShape2D = $CollisionShape2D
+@onready var name_label : Label = $Name
 
 enum STAR_SIZES {
 	SMALLEST,
@@ -18,9 +19,10 @@ enum STAR_SIZES {
 func _ready():
 	sprite_2d.texture = constellation.sprite_stars
 	init_star_size()
+	name_label.text = constellation.name
 
 func select_star():
-	if not GameStatus.add_new_image(constellation): return
+	GameStatus.add_new_image(constellation)
 
 func init_star_size():
 	match size:
@@ -40,5 +42,9 @@ func init_star_size():
 			sprite_2d.scale = Vector2(3, 3)
 	
 func mark_selectable(selected : bool):
-	var current_sprite = constellation.sprite_full if selected else constellation.sprite_stars
-	sprite_2d.texture = current_sprite
+	if selected:
+		sprite_2d.texture = constellation.sprite_full
+		name_label.visible = true
+	else:
+		sprite_2d.texture = constellation.sprite_stars
+		name_label.visible = false

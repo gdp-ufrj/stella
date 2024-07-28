@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnuaxdnwile1u"]
+[gd_scene load_steps=5 format=3 uid="uid://dnuaxdnwile1u"]
 
 [ext_resource type="Script" path="res://scripts/star.gd" id="1_4sq42"]
 [ext_resource type="Texture2D" uid="uid://cooblejk2j3rv" path="res://assets/constellations/normal/raposa.png" id="2_u7dhg"]
+[ext_resource type="FontFile" uid="uid://71j4oljo4i6m" path="res://assets/fonts/Pixeled.ttf" id="3_pb77p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jdvks"]
 resource_local_to_scene = true
@@ -17,3 +18,19 @@ texture = ExtResource("2_u7dhg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(40, 40)
 shape = SubResource("RectangleShape2D_jdvks")
+
+[node name="Name" type="Label" parent="."]
+visible = false
+offset_left = 5.0
+offset_top = 64.0
+offset_right = 76.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.85098, 1, 0.886275, 1)
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("3_pb77p")
+theme_override_font_sizes/font_size = 5
+text = "TEST HINT"
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+metadata/_edit_use_anchors_ = true
