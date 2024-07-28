@@ -1,7 +1,7 @@
 extends Node
 
 signal checkpoint_reached(level : int)
-signal end_puzzle_done()
+signal puzzle_done(effect : String)
 
 @onready var completed_count = 0
 @onready var checkpoints : Array[int] = [2,4,6,8,10]
@@ -30,7 +30,10 @@ func _ready():
 
 func _on_game_status_puzzle_completed(id : int):
 	if puzzles_status[id]: return # Puzzle already completed
-	if id == 17: end_puzzle_done.emit()
+	if id == 17: 
+		puzzle_done.emit("screen_bright")
+	else:
+		puzzle_done.emit("correct")
 	
 	puzzles_status[id] = true
 	update_completed_count()
