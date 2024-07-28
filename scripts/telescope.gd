@@ -47,9 +47,12 @@ func mark_selected():
 	
 	if current_selectable == null and last_selectable != null:
 		last_selectable.mark_selectable(false)
-	
-	if current_selectable != null and last_selectable == null:
+	elif current_selectable != null and last_selectable == null:
 		current_selectable.mark_selectable(true)
+	elif current_selectable != last_selectable:
+		last_selectable.mark_selectable(false)
+		current_selectable.mark_selectable(true)
+	
 
 func _on_checkpoint_reached(level : int):
 	set_lens(level+1)
