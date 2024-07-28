@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://llbkemprqkx6" path="res://assets/hud/book_hover.png" id="10_7tuov"]
 [ext_resource type="Texture2D" uid="uid://dp1rbki6iokm2" path="res://assets/hud/open_notebook.png" id="11_qn6rk"]
 [ext_resource type="PackedScene" uid="uid://drs5025ebtgk8" path="res://scenes/notebook_option.tscn" id="13_awek3"]
-[ext_resource type="Resource" path="res://scripts/resources/puzzles/puzzle_17.tres" id="14_8un3l"]
+[ext_resource type="Resource" uid="uid://duqpjvv3jdybm" path="res://scripts/resources/puzzles/puzzle_17.tres" id="14_8un3l"]
 [ext_resource type="Resource" uid="uid://bnkvjiwsdv2pn" path="res://scripts/resources/puzzles/puzzle_1.tres" id="14_bluc0"]
 [ext_resource type="Resource" uid="uid://brtply2blonhd" path="res://scripts/resources/puzzles/puzzle_2.tres" id="14_sqvv8"]
 [ext_resource type="Resource" uid="uid://bnqp2k0c5i1ny" path="res://scripts/resources/puzzles/puzzle_3.tres" id="16_y2cnx"]

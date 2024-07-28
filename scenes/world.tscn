@@ -19,7 +19,7 @@
 [ext_resource type="Resource" uid="uid://bmcyeqwnyoh3p" path="res://scripts/resources/constellations/spider.tres" id="17_ns4q6"]
 [ext_resource type="Resource" uid="uid://bc2oojecgkh14" path="res://scripts/resources/constellations/scales.tres" id="18_ms3vm"]
 [ext_resource type="Resource" uid="uid://c66iwtf4q3n7x" path="res://scripts/resources/constellations/guitar.tres" id="19_tyqi6"]
-[ext_resource type="Resource" path="res://scripts/resources/constellations/star.tres" id="20_lnkh2"]
+[ext_resource type="Resource" uid="uid://b83g6yhpjwqoj" path="res://scripts/resources/constellations/star.tres" id="20_lnkh2"]
 
 [node name="World" type="Node2D"]
 
@@ -34,78 +34,99 @@ texture = ExtResource("2_48iha")
 script = ExtResource("3_s01xt")
 speed = 5.0
 
-[node name="Fox" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(503, 83)
-constellation = ExtResource("5_nnl8j")
-size = 3
+[node name="Level1" type="Control" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Pumpkin" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(352, 95)
-constellation = ExtResource("6_7yja2")
-size = 2
-
-[node name="Shoes" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(111, 416)
-constellation = ExtResource("7_8g724")
-size = 4
-
-[node name="Clock" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(740, 412)
-constellation = ExtResource("8_1qmx2")
-size = 1
-
-[node name="Inkwell" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(636, 142)
+[node name="Inkwell" parent="Background/Level1" instance=ExtResource("4_aq1hn")]
+position = Vector2(637, 106)
 constellation = ExtResource("9_wqppx")
 
-[node name="Feather" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(464, 202)
+[node name="Feather" parent="Background/Level1" instance=ExtResource("4_aq1hn")]
+position = Vector2(465, 166)
 constellation = ExtResource("10_ngmmh")
 
-[node name="Egg" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(441, 414)
+[node name="Egg" parent="Background/Level1" instance=ExtResource("4_aq1hn")]
+position = Vector2(442, 378)
 constellation = ExtResource("11_6jnvg")
 
-[node name="Sapling" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(211, 187)
+[node name="Sapling" parent="Background/Level1" instance=ExtResource("4_aq1hn")]
+position = Vector2(212, 151)
 constellation = ExtResource("12_03jln")
 
-[node name="Battery" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(87, 291)
+[node name="Level2" type="Control" parent="Background"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Clock" parent="Background/Level2" instance=ExtResource("4_aq1hn")]
+position = Vector2(741, 376)
+constellation = ExtResource("8_1qmx2")
+
+[node name="Battery" parent="Background/Level2" instance=ExtResource("4_aq1hn")]
+position = Vector2(88, 255)
 constellation = ExtResource("13_0arie")
-size = 1
 
-[node name="Jug" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(266, 410)
+[node name="Level3" type="Control" parent="Background"]
+visible = false
+anchors_preset = 0
+
+[node name="Pumpkin" parent="Background/Level3" instance=ExtResource("4_aq1hn")]
+position = Vector2(353, 59)
+constellation = ExtResource("6_7yja2")
+
+[node name="Jug" parent="Background/Level3" instance=ExtResource("4_aq1hn")]
+position = Vector2(267, 374)
 constellation = ExtResource("14_o4ky3")
-size = 2
 
-[node name="Fish" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(596, 272)
+[node name="Fish" parent="Background/Level3" instance=ExtResource("4_aq1hn")]
+position = Vector2(597, 236)
 constellation = ExtResource("15_gxjuo")
-size = 2
 
-[node name="Microphone" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(582, 416)
+[node name="Level4" type="Control" parent="Background"]
+visible = false
+anchors_preset = 0
+
+[node name="Fox" parent="Background/Level4" instance=ExtResource("4_aq1hn")]
+position = Vector2(504, 47)
+constellation = ExtResource("5_nnl8j")
+
+[node name="Microphone" parent="Background/Level4" instance=ExtResource("4_aq1hn")]
+position = Vector2(583, 380)
 constellation = ExtResource("16_ihylb")
-size = 3
 
-[node name="Spider" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(754, 252)
+[node name="Spider" parent="Background/Level4" instance=ExtResource("4_aq1hn")]
+position = Vector2(755, 216)
 constellation = ExtResource("17_ns4q6")
-size = 3
 
-[node name="Scales" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(746, 86)
+[node name="Level5" type="Control" parent="Background"]
+visible = false
+anchors_preset = 0
+
+[node name="Shoes" parent="Background/Level5" instance=ExtResource("4_aq1hn")]
+position = Vector2(112, 380)
+constellation = ExtResource("7_8g724")
+
+[node name="Scales" parent="Background/Level5" instance=ExtResource("4_aq1hn")]
+position = Vector2(747, 50)
 constellation = ExtResource("18_ms3vm")
-size = 4
 
-[node name="Guitar" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(100, 103)
+[node name="Guitar" parent="Background/Level5" instance=ExtResource("4_aq1hn")]
+position = Vector2(101, 67)
 constellation = ExtResource("19_tyqi6")
-size = 4
 
-[node name="Star" parent="Background" instance=ExtResource("4_aq1hn")]
-position = Vector2(339, 254)
+[node name="Level6" type="Control" parent="Background"]
+visible = false
+anchors_preset = 0
+
+[node name="Star" parent="Background/Level6" instance=ExtResource("4_aq1hn")]
+position = Vector2(340, 218)
 constellation = ExtResource("20_lnkh2")
-size = 3
