@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=3 format=3 uid="uid://duqpjvv3jdybm"]
+
+[ext_resource type="Script" path="res://scripts/resources/puzzles/puzzle_base.gd" id="1_lt6cx"]
+[ext_resource type="Resource" uid="uid://b83g6yhpjwqoj" path="res://scripts/resources/constellations/star.tres" id="2_humic"]
+
+[resource]
+script = ExtResource("1_lt6cx")
+id = 17
+hint_text = "Entre as estrelas e os segredos da noite."
+solution_list = Array[Resource("res://scripts/resources/constellations/constellation_base.gd")]([ExtResource("2_humic")])

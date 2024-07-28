@@ -13,7 +13,8 @@ var current_lens = 0
 func _ready():
 	for ico in $"../PuzzlePanel/InventoryIcons".get_children():
 		icons.append(ico)
-	set_lens(4)
+	set_lens(current_lens)
+	Progress.checkpoint_reached.connect(_on_checkpoint_reached)
 
 func _input(event):
 	if event.is_action_pressed("select"):
@@ -33,24 +34,27 @@ func _on_area_2d_area_entered(area):
 func _on_area_2d_area_exited(area):
 	contained_stars.erase(area)
 
+func _on_checkpoint_reached(level : int):
+	set_lens(level+1)
+
 func is_completely_inside(star: Area2D) -> bool:
 	var telescope_center : Vector2 = area_2d.global_position
 	var telescope_radius : float = collision_shape_2d.shape.radius
-
+	
 	var star_collision : CollisionShape2D = star.get_node("CollisionShape2D")
 	var star_shape = star_collision.shape.size
-
+	
 	var points : Array = [
 		Vector2(star_collision.global_position.x - star_shape.x/2, star_collision.global_position.y - star_shape.y/2),
 		Vector2(star_collision.global_position.x - star_shape.x/2, star_collision.global_position.y + star_shape.y/2),
 		Vector2(star_collision.global_position.x + star_shape.x/2, star_collision.global_position.y - star_shape.y/2),
 		Vector2(star_collision.global_position.x + star_shape.x/2, star_collision.global_position.y + star_shape.y/2)
 	]
-
+	
 	for p in points:
 		if telescope_center.distance_to(p) > telescope_radius:
 			return false
-
+	
 	return true
 
 func set_lens(level : int):

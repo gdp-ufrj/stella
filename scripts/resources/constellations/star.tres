@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" load_steps=5 format=3 uid="uid://b83g6yhpjwqoj"]
+
+[ext_resource type="Script" path="res://scripts/resources/constellations/constellation_base.gd" id="1_up83d"]
+[ext_resource type="Texture2D" uid="uid://s5bn1r5e2m85" path="res://assets/constellations/normal/estrela.png" id="2_glmxb"]
+[ext_resource type="Texture2D" uid="uid://bbnxnly3assbs" path="res://assets/constellations/icon/estrela_pqn.png" id="3_wlkvd"]
+[ext_resource type="Texture2D" uid="uid://dufexk43pi4t5" path="res://assets/constellations/no_lines/estrela_estrelaa.png" id="4_374ci"]
+
+[resource]
+script = ExtResource("1_up83d")
+name = "Estrela"
+sprite_full = ExtResource("2_glmxb")
+sprite_stars = ExtResource("4_374ci")
+sprite_mini = ExtResource("3_wlkvd")

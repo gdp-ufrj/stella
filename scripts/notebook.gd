@@ -1,6 +1,11 @@
 extends Control
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
+var puzzles : Array[Node]
+
+func _ready():
+	puzzles = $Notebook/Puzzles.get_children()
+	Progress.checkpoint_reached.connect(_on_checkpoint_reached)
 
 func _on_notebook_button_pressed():
 	if GameStatus.current_state == GameStatus.GAME_STATE.EXPLORATION:
@@ -14,3 +19,6 @@ func _on_close_button_pressed():
 	# To release all focus from children, not sure why it works
 	hide()
 	show()
+
+func _on_checkpoint_reached(level : int):
+	puzzles[level+1].show()
